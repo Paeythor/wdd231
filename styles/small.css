@@ -1,0 +1,422 @@
+:root {
+    --nav-font: 'Merriweather', serif;
+    --header-font: 'Merriweather', serif;
+    --body-font: 'Roboto', sans-serif;
+    --cursive-sample-font: 'Rock Salt', cursive;
+  
+    --header-font-size: 2em;
+  
+    --dark-red-emphasis-color: #891d1a;
+    --section-background-color: #FFF8DC;
+    --section-header-bg: #001F3F;
+    --section-header-text: #FFF8DC;
+    --background-color: #8B0000;
+    --main-color: #FFF8DC;
+    --font-color1: #1C1C1C;
+    --accent-color: #DAA520;
+    --accent-color2: #B22222;
+    --emphasis-color: #FFD700;
+    --highlight-text-color: #4a37f4;
+    --header-footer-background-color: #b14a16;
+    --header-footer-nav-text-color: #360202;
+    --nav-background-color: #DAA520;
+    --main-and-card-background-color: #B22222;
+    --main-aside-text-color: #FFF8DC;
+    --hr-color: #410606;
+  
+    --section-spacing: 4rem;
+    --header-height: 800px;
+    --nav-height: 3em;
+    --main-max-width: 800px;
+    --main-min-width: 250px;
+    --footer-height: 850px;
+    --figure-height: 200px;
+    --figure-width: 250px;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    color: var(--main-color);
+  }
+  
+  h1, h2, h3, h4, h5, li {
+    font-family: var(--header-font);
+  }
+  
+  p {
+    font-family: var(--body-font);
+  }
+  
+  ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  li {
+    line-height: 1.5em;
+  }
+  
+  header, footer {
+    background-color: var(--header-footer-background-color);
+    color: var(--main-color);
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  footer {
+    margin-top: auto;
+  }
+  
+  footer p {
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  #menu {
+    display: block;
+    font-size: 40px;
+    text-decoration: none;
+    padding: 8px 12px;
+    background-color: var(--header-footer-background-color);
+    color: var(--main-color);
+    font-family: var(--nav-font);
+    position: absolute;
+    top: 1.6rem;
+    right: 1.5rem;
+    cursor: pointer;
+    border: 0;
+  }
+  
+  #menu::before {
+    content: "≡";
+  }
+  
+  #menu.open::before {
+    content: "X";
+  }
+  
+  nav {
+    background-color: var(--nav-background-color);
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: none;
+    border-bottom: 1px solid #555;
+  }
+  
+  nav li:last-child {
+    border-bottom: none;
+  }
+  
+  nav a {
+    display: block;
+    text-align: center;
+    padding: 8px 16px;
+    color: var(--header-footer-nav-text-color);
+    text-decoration: none;
+    font-family: var(--nav-font);
+  }
+  
+  nav a:hover:not(.active) {
+    background-color: var(--accent-color);
+    color: var(--main-color);
+  }
+  
+  nav a.active {
+    background-color: var(--main-color);
+    color: var(--dark-red-emphasis-color);
+  }
+  
+  .open li {
+    display: block;
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    grid-gap: 1em;
+    margin: 20px;
+    flex: 1;
+    background-color: var(--main-and-card-background-color);
+    color: var(--main-color);
+  }
+  
+  main section {
+    background-color: var(--section-background-color);
+    border-radius: 5px;
+    box-shadow: 6px 4px 8px;
+    margin: 10px auto;
+    width: fit-content;
+    text-align: center;
+  }
+  
+  section h2 {
+    background-color: var(--section-header-bg);
+    color: var(--section-header-text);
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+    font-size: var(--header-font-size);
+    padding: 10px 0;
+  }
+  
+  section ul {
+    padding: 0 40px;
+    margin: 10px 0;
+  }
+  
+  section li {
+    text-align: left;
+    font-size: 1rem;
+  }
+  
+  section p {
+    font-size: 1rem;
+    margin: 0 0 10px 0;
+  }
+  
+  picture {
+    padding: 10px;
+    max-width: 300px;
+  }
+  
+  section img {
+    height: auto;
+    width: 80%;
+    display: block;
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+  
+  .boxcertificate01 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .boxButton {
+    padding-top: 10px;
+  }
+  
+  .courseButton {
+    flex: 1 1 100%;
+    margin: 5px;
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    border-radius: 5rem;
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    font-family: var(--header-font);
+  }
+  
+  .courseButton:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent-color);
+    border-radius: 5rem;
+    z-index: -2;
+  }
+  
+  .courseButton:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: var(--main-color);
+    transition: all 0.3s;
+    border-radius: 5rem;
+    z-index: -1;
+  }
+  
+  .courseButton:hover {
+    color: var(--dark-red-emphasis-color);
+  }
+  
+  .courseButton:hover:before {
+    width: 100%;
+  }
+  
+  .course {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--dark-red-emphasis-color);
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    transition: all 0.3s;
+    background-color: var(--accent-color2);
+    color: var(--main-color);
+  }
+  
+  .course h3 {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s;
+  }
+  
+  .courseNoComplete {
+    background-color: var(--section-background-color);
+    color: var(--font-color1);
+  }
+  
+  .courseComplete {
+    background-color: var(--accent-color2);
+    color: white;
+  }
+  
+  .course::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid var(--dark-red-emphasis-color);
+    border-bottom: 1px solid var(--dark-red-emphasis-color);
+    opacity: 0;
+    transform: scale(0.1, 1);
+    transition: all 0.3s;
+    z-index: 1;
+  }
+  
+  .course:hover h3 {
+    letter-spacing: 2px;
+  }
+  
+  .course:hover::before {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+  
+  .course::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(218, 165, 32, 0.1);
+    transition: all 0.5s;
+    z-index: 1;
+  }
+  
+  .course:hover::after {
+    opacity: 0;
+    transform: scale(0.1, 1);
+  }
+  
+  .filter-btn {
+    background-color: var(--accent-color);
+    color: var(--main-color);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.5rem 1.25rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: var(--header-font);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .filter-btn.active,
+  .filter-btn:hover {
+    background-color: var(--main-color);
+    color: var(--dark-red-emphasis-color);
+  }
+  
+  dialog {
+    border: 1px solid var(--dark-red-emphasis-color);
+    border-radius: 0.25rem;
+    padding: 1rem;
+    background-color: var(--section-background-color);
+    box-shadow: 0 0 3rem var(--dark-red-emphasis-color);
+    width: 90%;
+    max-width: 600px;
+  }
+  
+  ::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  dialog button {
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--dark-red-emphasis-color);
+  }
+  
+  @media (min-width: 480px) {
+    nav ul {
+      display: flex;
+    }
+  
+    nav ul li {
+      display: block;
+      flex: 1 1 100%;
+    }
+  
+    #menu {
+      display: none;
+    }
+  
+    main {
+      max-width: var(--main-max-width);
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1em;
+      margin: 10px auto;
+    }
+  
+    main p {
+      font-size: 1rem;
+    }
+  
+    section {
+      flex-basis: 15em;
+      flex-grow: 1;
+    }
+  
+    .boxcertificate01 {
+      width: 650px;
+      margin: 20px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
+      grid-gap: 1em;
+    }
+  
+    .course {
+      padding: 10px;
+    }
+  }
+  

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Course Home Page" />
+  <meta name="author" content="Jacob Schumann" />
+  <title>Course Home Page</title>
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <img src="images/jacob_photo.jpg" alt="Jacob Schumann" class="avatar" />
+      <span class="header-name">Jacob Schumann</span>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Chamber</a></li>
+      <li><a href="#">Final</a></li>
+      <li><a href="#">GitHub Profile</a></li>
+      <li><a href="#">LinkedIn</a></li>
+    </ul>
+  </nav>
+
+  
+    <h1>Home</h1>
+    <main>
+    <section>
+        <h2>Course Work</h2>
+        <p>Details about the course content go here. This section provides an overview of the course, including topics covered, objectives, and expectations.</p>
+      </section>
+    <section>
+      <h2>Provo, UT</h2>
+      <p><img src="images/ymountain.jpg" alt="Y Mountain">
+    </section>
+
+    <section>
+      <h2>Upcoming Events</h2>
+      <p>Details about upcoming events go here, including dates, times, and any important information related to course-related events.</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>If you need to contact me, feel free to email me or use the contact form. Here is my contact information:</p>
+      <ul>
+        <li>Email: jacob.c.schumann@hotmail.com</li>
+        <li>Phone: +1-801-854-2100</li>
+      </ul>
+    </section>
+
+    <section>
+        <section>
+            <h2>Web and Computer Programming Certificate</h2>
+          
+            <div class="boxButton">
+              <button class="filter-btn active" value="all">All</button>
+              <button class="filter-btn" value="CSE">CSE</button>
+              <button class="filter-btn" value="WDD">WDD</button>
+            </div>
+          
+            <div id="totalCreditsCert01"></div>
+            <div class="boxcertificate01"></div>
+          
+            <div id="totalCreditsCert02"></div>
+            <div class="boxcertificate02"></div>
+          
+            <div id="totalCreditsCert03"></div>
+            <div class="boxcertificate03"></div>
+          </section>
+          
+      </div>
+
+      <div id="totalCredits"></div>
+
+      <div class="course-list"></div>
+
+      <dialog id="course-details"></dialog>
+
+      <div class="courses">
+        <button class="courseButton">CSE 110</button>
+        <button class="courseButton">WDD 130</button>
+        <button class="courseButton">CSE 111</button>
+        <button class="courseButton">CSE 210</button>
+        <button class="courseButton">WDD 131</button>
+        <button class="courseButton">WDD 231</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© <span id="currentyear"></span> Jacob Schumann | Provo, UT</p>
+    <p class="lastmodified">Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="scripts/main.js" defer></script>
+  <script src="course.js" defer></script>
+</body>
+
+</html>

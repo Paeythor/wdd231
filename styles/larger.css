@@ -1,0 +1,199 @@
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+h1, h2, h3 {
+    color: #333;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* ================== Filter Buttons =================== */
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 12px 18px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 16px;
+}
+
+.filter-btn:hover {
+    background-color: #ddd;
+}
+
+.filter-btn.active {
+    background-color: #8B0000;
+    color: #fff;
+}
+
+/* ================== Course Cards =================== */
+.course-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card {
+    width: 230px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.card p,
+.card .status {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.card .status.completed {
+    color: green;
+}
+
+.card .status.in-progress {
+    color: orange;
+}
+
+/* ================== Header / Footer =================== */
+header,
+footer {
+    background-color: #8B0000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+footer #currentyear {
+    font-weight: bold;
+}
+
+footer .lastmodified {
+    font-size: 12px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ================== Responsive Layout =================== */
+@media (min-width: 768px) {
+    .filter-btn {
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+
+    .course-list {
+        gap: 30px;
+    }
+
+    .card {
+        width: 260px;
+        padding: 25px;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: flex-start;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        list-style-type: none;
+        padding: 15px;
+    }
+
+    nav ul li a {
+        color: #333;
+        font-size: 18px;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px 15px;
+    }
+
+    nav ul li a:hover {
+        background-color: #8B0000;
+        color: white;
+        border-radius: 5px;
+    }
+}
+
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+li {
+    line-height: 1.5em;
+}
+/* ================== WDD Buttons =================== */
+.courseButton.wdd {
+    background-color: #1E90FF; /* DodgerBlue */
+    color: white;
+}
+
+.courseButton.wdd:hover {
+    background-color: #104E8B; /* Darker blue */
+}
+
+/* ================== CSE Buttons =================== */
+.courseButton.cse {
+    background-color: #1E90FF; /* DodgerBlue */
+    color: white;
+}
+
+.courseButton.cse:hover {
+    background-color: #104E8B; /* Darker blue */
+}
