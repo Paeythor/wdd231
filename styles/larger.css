@@ -153,9 +153,9 @@ header a:hover {
 .header-content {
     display: flex;
     align-items: center;
-    justify-content: center; /* This centers content horizontally */
-    gap: 10px; /* Optional: spacing between image and name */
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    justify-content: center;
+    gap: 10px; 
+    flex-wrap: wrap; 
 }
 
   
