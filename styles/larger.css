@@ -1,11 +1,30 @@
+
+
+
 body {
     font-family: "Roboto", sans-serif;
-    margin: 0;
+    margin: 2px;
     padding: 20px;
     background-color: #f4f4f4;
     color: #333;
 }
-h1, h2, h3 {
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h1 {
+	font-size: 1.5rem;
+	font-weight: 700;
+	background-color: rgb(70 83 107 / 50%);
+	padding: 1rem;
+	border: 1px solid rgb(0 0 0 / 10%);
+	text-align: center;
+	font-family: Acme, sans-serif;
+}
+
+h2, h3 {
     color: #333;
 }
 
@@ -19,7 +38,6 @@ p {
     color: #555;
 }
 
-/* ================== Filter Buttons =================== */
 .filter-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -46,7 +64,6 @@ p {
     color: #fff;
 }
 
-/* ================== Course Cards =================== */
 .course-list {
     display: flex;
     flex-wrap: wrap;
@@ -54,13 +71,20 @@ p {
     gap: 20px;
 }
 
+.card-container {
+    background-color: red;
+    padding: 50px;
+    border-radius: 20px;
+    margin: 120 px;
+}
+
 .card {
-    width: 230px;
+    width: 100px;
     padding: 20px;
     background: #fff;
     border: 1px solid #ccc;
     border-radius: 8px;
-    margin: 10px;
+    margin: 0px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     opacity: 0;
     transform: translateY(20px);
@@ -91,8 +115,50 @@ p {
     color: orange;
 }
 
-/* ================== Header / Footer =================== */
-header,
+header {
+    background-color: #8B0000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+header p {
+    font-size: 20px;
+}
+
+header #currentyear {
+    font-weight: bold;
+}
+
+header .lastmodified {
+    font-size: 12px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+.header-name-img {
+    max-height: 100px; 
+    margin-left: 10px;
+    vertical-align: middle;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* This centers content horizontally */
+    gap: 10px; /* Optional: spacing between image and name */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+  
 footer {
     background-color: #8B0000;
     color: white;
@@ -105,7 +171,7 @@ footer {
 }
 
 footer p {
-    font-size: 14px;
+    font-size: 20px;
 }
 
 footer #currentyear {
@@ -126,7 +192,6 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* ================== Responsive Layout =================== */
 @media (min-width: 768px) {
     .filter-btn {
         padding: 15px 20px;
@@ -138,36 +203,42 @@ footer a:hover {
     }
 
     .card {
-        width: 260px;
+        width: 200px;
         padding: 25px;
+     
     }
-
     nav ul {
-        display: flex;
-        justify-content: flex-start;
-        padding: 0;
-        margin: 0;
-    }
-
-    nav ul li {
         list-style-type: none;
-        padding: 15px;
     }
-
-    nav ul li a {
-        color: #333;
-        font-size: 18px;
+    
+    nav a {
+        display: inline-block;
+        padding: 1em 2em;
         text-decoration: none;
-        font-weight: bold;
-        padding: 10px 15px;
+        color: #333;
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s ease;
+      }
+      
+    nav a:hover::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100px;
+        height: 100px;
+        background: url('../images/superman-logo.svg') no-repeat center;
+        background-size: contain;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        pointer-events: none;
+      }
+      
+      
+      
     }
-
-    nav ul li a:hover {
-        background-color: #8B0000;
-        color: white;
-        border-radius: 5px;
-    }
-}
+    
 
 
 ul {
@@ -178,22 +249,27 @@ ul {
 li {
     line-height: 1.5em;
 }
-/* ================== WDD Buttons =================== */
+
 .courseButton.wdd {
-    background-color: #1E90FF; /* DodgerBlue */
+    background-color: #1E90FF;
     color: white;
 }
 
 .courseButton.wdd:hover {
-    background-color: #104E8B; /* Darker blue */
+    background-color: #104E8B;
 }
 
-/* ================== CSE Buttons =================== */
 .courseButton.cse {
-    background-color: #1E90FF; /* DodgerBlue */
+    background-color: #1E90FF;
     color: white;
 }
 
 .courseButton.cse:hover {
-    background-color: #104E8B; /* Darker blue */
+    background-color: #104E8B;
+}
+
+.red-background-wrapper {
+    background-color: red;
+    padding: 130px;
+    min-height: 100%;
 }
