@@ -146,8 +146,8 @@
   
   main {
     display: flex;
-    flex-template-columns: repeat(auto-fill, minmax(15em, 1fr));
-    flex-gap: 1em;
+    flex-wrap: wrap;                  /* Allows items to wrap */
+    gap: 1em;                         /* Correct property for spacing in flex */
     margin: 20px;
     flex: 1;
     background-color: var(--main-and-card-background-color);
