@@ -315,3 +315,45 @@ nav a:hover {
         border-top: 1px solid white;
     }
 }
+/* Show hamburger only on small screens */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1rem;
+    color: white;
+}
+
+/* Default nav-links style */
+.nav-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Hide nav-links on small screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #0033a0;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 999;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    nav {
+        position: relative;
+    }
+}
