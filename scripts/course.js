@@ -44,16 +44,17 @@ function renderCourses() {
         const btn = document.createElement("button");
         btn.textContent = `${course.subject} ${course.number}`;
 
-        // Assign classes based on course status
+        // Assign classes based on course status and subject
+        btn.classList.add("course", course.subject);
         if (course.completed) {
-            btn.classList.add("course", "completed");
+            btn.classList.add("completed");
         } else if (course.inProgress) {
-            btn.classList.add("course", "in-progress");
+            btn.classList.add("in-progress");
         } else {
-            btn.classList.add("course", "not-completed");
+            btn.classList.add("not-completed");
         }
 
-        // Add a listener to show course info when clicked
+        // Add double-click event to show course info
         btn.addEventListener("dblclick", () => showCourseInfo(course));
 
         const container = certificateContainers[course.certificate];
@@ -63,11 +64,13 @@ function renderCourses() {
     });
 }
 
-// Function to filter courses based on status
-function filterCourses(type) {
-    const buttons = document.querySelectorAll(".courses .course");
+// Filter only the specified certificate's courses
+function filterCourses(filter, containerId) {
+    const container = document.getElementById(containerId);
+    const buttons = container.querySelectorAll(".course");
+
     buttons.forEach(btn => {
-        if (type === 'all' || btn.classList.contains(type)) {
+        if (filter === 'all' || btn.classList.contains(filter)) {
             btn.style.display = 'inline-block';
         } else {
             btn.style.display = 'none';
@@ -75,7 +78,7 @@ function filterCourses(type) {
     });
 }
 
-// Function to show course details when a button is double-clicked
+// Show course info in the corresponding card box
 function showCourseInfo(course) {
     const infoBoxMap = {
         "Web and Computer Programming": "course-info-web-computer-programming",
@@ -105,6 +108,5 @@ function showCourseInfo(course) {
     }
 }
 
-// Call this to populate the page
+// Render courses on page load
 renderCourses();
-

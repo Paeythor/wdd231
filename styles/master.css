@@ -14,7 +14,7 @@ header {
     display: flex;
     align-items: center;
     gap: 1rem;
-    flex-wrap: wrap; /* Prevent layout breaking on smaller screens */
+    flex-wrap: wrap;
 }
 
 .avatar {
@@ -25,11 +25,34 @@ header {
 
 /* Heading styling */
 h2 {
-    color: #65a000; /* Superman Blue */
-    border-bottom: 2px solid #dc1c13; /* Superman Red underline */
+    color: #65a000;
+    border-bottom: 2px solid #dc1c13;
     padding-bottom: 0.3rem;
     margin-bottom: 1rem;
     font-size: 1.5rem;
+}
+
+/* Section header */
+.section-header {
+    background-color: #0033a0; 
+    color: #ffcc00; 
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Ensure links inside section-header are gold */
+.section-header a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.section-header a:hover {
+    text-decoration: underline;
+    color: #f1c40f;
 }
 
 /* Navigation bar */
@@ -43,9 +66,10 @@ nav a {
     display: inline-block;
     padding: 1em 2em;
     text-decoration: none;
-    position: relative; 
+    position: relative;
     z-index: 1;
     transition: color 0.3s ease, font-size 0.3s ease;
+    color: white;
 }
 
 nav a:hover {
@@ -64,13 +88,7 @@ nav a:hover::before {
     transform: translate(-50%, -50%);
     z-index: -1;
     pointer-events: none;
-
- 
 }
-
-
-
-
 
 /* Main content */
 main {
@@ -133,37 +151,41 @@ main {
     flex: 1 0 30%;
     text-align: center;
     font-weight: bold;
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-/* Footer */
-footer {
-    background-color: #0033a0;
-    color: #ffcc00;
-    text-align: center;
-    padding: 1rem;
-    position: relative;
+/* Course status styles */
+.course.completed {
+    background-color: #dc1c13;
 }
 
-.flag {
-    width: 30px;
-    margin-top: 0.5rem;
+.course.in-progress {
+    background-color: #f9a825;
 }
 
-.section-header {
-    background-color: #0033a0; 
-    color: #ffcc00; 
-    padding: 0.75rem 1rem;
-    border-radius: 5px;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    text-align: left;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-decoration: none;
+.course.not-completed {
+    background-color: #2e7d32;
 }
-.section-header a:hover {
-    text-decoration: underline; /* Optional: add underline on hover */
-    color: #f1c40f;
+
+/* Hover effects */
+.course:hover {
+    opacity: 0.85;
+    transform: scale(1.05);
 }
+
+.course.completed:hover {
+    background-color: #c2130d;
+}
+
+.course.in-progress:hover {
+    background-color: #e6b200;
+}
+
+.course.not-completed:hover {
+    background-color: #288c3b;
+}
+
+/* Course button appearance */
 .courses button {
     margin: 5px;
     padding: 10px 15px;
@@ -181,15 +203,17 @@ footer {
     transform: scale(1.1);
 }
 
+/* Course info box */
 #course-info {
     border-top: 2px solid #005cbf;
     padding-top: 10px;
     font-size: 1.1rem;
 }
 
+/* Course card styling */
 .course-card {
     background-color: #f4f4f4;
-    color: #ffcc00; 
+    color: #ffcc00;
     padding: 20px;
     margin: 10px 0;
     border-radius: 5px;
@@ -204,39 +228,16 @@ footer {
     margin: 5px 0;
 }
 
-/* Course status button styling */
-.course.completed {
-    background-color: #dc1c13; /* Red for completed courses */
-    color: white;
+/* Footer */
+footer {
+    background-color: #0033a0;
+    color: #ffcc00;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
 }
 
-.course.in-progress {
-    background-color: #f9a825; /* Yellow for in-progress courses */
-    color: white;
-}
-
-.course.not-completed {
-    background-color: #2e7d32; /* Green for not completed courses */
-    color: white;
-}
-
-/* Hover effect to make it interactive */
-.course:hover {
-    opacity: 0.85;
-    transform: scale(1.05);
-}
-
-/* Hover effect for completed courses */
-.course.completed:hover {
-    background-color: #c2130d; /* Darker red */
-}
-
-/* Hover effect for in-progress courses */
-.course.in-progress:hover {
-    background-color: #e6b200; /* Slightly darker yellow */
-}
-
-/* Hover effect for not completed courses */
-.course.not-completed:hover {
-    background-color: #288c3b; /* Darker green */
+.flag {
+    width: 30px;
+    margin-top: 0.5rem;
 }
