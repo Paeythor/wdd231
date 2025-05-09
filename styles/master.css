@@ -154,7 +154,7 @@ main {
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-/* Course status styles */
+
 .course.completed {
     background-color: #dc1c13;
 }
