@@ -1,175 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Course Home Page">
-  <meta name="author" content="Jacob Schumann">
-  <meta property="og:title" content="European Travel Destinations">
-  <meta property="og:type" content="video.movie">
-  <meta property="og:url" content="http://euro-travel.com/index.htm">
-  <meta property="og:image" content="http://euro-travel.com/thumbnail.jpg">
-  <meta property="og:description" content="Offering tour packages for individuals or groups.">
-  <title>Course Home Page</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/larger.css">
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Course Home Page">
+    <meta name="author" content="Jacob Schumann">
+    <link rel="stylesheet" href="styles/master.css">
+    <title>Jacob Schumann - Course Page</title>
 </head>
-
 <body>
-  <header>
-    <div class="header-content">
-      <img src="images/jacob_photo.jpg" alt="Jacob C. Schumann" class="avatar">
-      <img src="images/jacob-c-schumann.png" alt="Jacob C. Schumann" class="header-name-img">
-    </div>
-  </header>
+    <header>
+        <div class="header-content">
+            <img src="images/jacob_photo.jpg" alt="Jacob C. Schumann" class="avatar">
+            <img src="images/jacob-c-schumann.png" alt="Jacob C. Schumann" class="header-name-img">
+        </div>
+    </header>
 
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Chamber</a></li>
-      <li><a href="#">Final</a></li>
-      <li><a href="#">GitHub Profile</a></li>
-      <li><a href="#">LinkedIn</a></li>
-    </ul>
-  </nav>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Chamber</a>
+        <a href="#">Final</a>
+        <a href="https://github.com/Paeythor">GitHub Profile</a>
+        <a href="https://www.linkedin.com/in/jacob-c-schumann/">LinkedIn</a>
+    </nav>
 
-    <div><h1>Home</h1></div>
-    
     <main>
-    <section>
-      <h2>Course Work</h2>
-      <p>*</p>
-      <p>*</p>
-      <p>*</p>
-      <p>*</p>
-      <p>*</p>
-      <p>*</p>
-      <p>*</p>
-      <p>*</p>
-      <ul>
-        <li>*</li>
-        <li>*</li>
-        <li>*</li>
-      </ul>
-    </section>
+        <section class="coursework">
+            <div class="card">
+                <h2 class="section-header">Course Work</h2>
+                <p>*</p>
+                <p>*</p>
+                <p>*</p>
+                <p>*</p>
+                <p>*</p>
+                <p>*</p>
+                <p>*</p>
+                <p>*</p>
+            </div>
+            <div class="card">
+                <h2 class="section-header">Provo, UT</h2>
+                <p><img src="images/ymountain2.jpg" alt="Y Mountain" ></p>
+                <p>Y Mountain</p>
+            </div>
+        </section>
 
-    <section>
-      <h2>Provo, UT</h2>
-      <p><img src="images/ymountain.jpg" alt="Y Mountain"></p>
-    </section>
+        <section class="certificate">
+            <h2 class="section-header">
+                <a href="https://www.byupathway.edu/certificate/web-computer-programming">Web and Computer Programming Certificate</a>
+              </h2>
+            <div class="filters">
+                <button onclick="filterCourses('all')">All</button>
+                <button onclick="filterCourses('CSE')">CSE</button>
+                <button onclick="filterCourses('WDD')">WDD</button>
+            </div>
 
-    <!-- Web and Computer Programming Certificate -->
-    <section>
-      <h2>Web and Computer Programming Certificate</h2>
-      <div class="boxButton">
-        <button class="filter-btn active" value="all">All</button>
-        <button class="filter-btn" value="CSE">CSE</button>
-        <button class="filter-btn" value="WDD">WDD</button>
-      </div>
+            <div class="courses" id="courses-web-computer-programming">
+                
+            </div>
 
-      <div id="totalCreditsCert01"></div>
-      <div class="boxcertificate01"></div>
+            <div id="course-info-web-computer-programming" class="card" style="margin-top: 20px;">
+                
+            </div>
+        </section>
+        <section class="certificate">
+            <h2 class="section-header">
+                <a href="https://www.byupathway.edu/certificate/web-backend-development">Web Development Certificate</a>
+              </h2>
+            <div class="filters">
+                <button onclick="filterCourses('all')">All</button>
+                <button onclick="filterCourses('CSE')">CSE</button>
+                <button onclick="filterCourses('WDD')">WDD</button>
+                <button onclick="filterCourses('ITM')">ITM</button>
+            </div>
 
-      <div id="totalCreditsCert02"></div>
-      <div class="boxcertificate02"></div>
+            <div class="courses" id="courses-web-development">
+                
+            </div>
 
-      <div id="totalCreditsCert03"></div>
-      <div class="boxcertificate03"></div>
+            <div id="course-info-web-development" class="card" style="margin-top: 20px;">
+                
+            </div>
+        </section>
+        <section class="certificate">
+            <h2 class="section-header">
+                <a href="https://www.byupathway.edu/bachelors-degree/software-development">Software Development Certificate</a>
+              </h2>
+            <div class="filters">
+                <button onclick="filterCourses('all')">All</button>
+                <button onclick="filterCourses('CSE')">CSE</button>
+                <button onclick="filterCourses('WDD')">WDD</button>
+            </div>
 
-      <div class="courses">
-        <div class="course-row">
-          <button class="courseButton">CSE 110</button>
-          <button class="courseButton">WDD 130</button>
-          <button class="courseButton">CSE 111</button>
-        </div>
-        <div class="course-row">
-          <button class="courseButton">CSE 210</button>
-          <button class="courseButton">WDD 131</button>
-          <button class="courseButton">WDD 231</button>
-        </div>
-      </div>
-    </section>
+            <div class="courses" id="courses-software-development">
+                
+            </div>
 
-    <!-- Web Development Certificate -->
-    <section>
-      <h2>Web Development Certificate</h2>
-      <div class="boxButton">
-        <button class="filter-btn active" value="all">All</button>
-        <button class="filter-btn" value="CSE">CSE</button>
-        <button class="filter-btn" value="WDD">WDD</button>
-      </div>
+            <div id="course-info-software-development" class="card" style="margin-top: 20px;">
+                
+            </div>
+        </section>
+    </main>
 
-      <div id="totalCreditsCert01"></div>
-      <div class="boxcertificate01"></div>
+    <footer>
+        <p>© <span id="currentyear"></span> Jacob Schumann | Provo, UT</p>
+        <p class="lastmodified">Last Modified: <span id="lastModified"></span></p>
+    </footer>
 
-      <div id="totalCreditsCert02"></div>
-      <div class="boxcertificate02"></div>
-
-      <div id="totalCreditsCert03"></div>
-      <div class="boxcertificate03"></div>
-
-      <div class="courses">
-        <div class="course-row">
-          <button class="courseButton">ITM 111</button>
-          <button class="courseButton">WDD 330</button>
-          <button class="courseButton">CSE 340</button>
-        </div>
-        <div class="course-row">
-          <button class="courseButton">CSE 341</button>
-          <button class="courseButton">WDD 430</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Software Development Certificate -->
-    <section>
-      <h2>Software Development Certificate</h2>
-      <div class="boxButton">
-        <button class="filter-btn active" value="all">All</button>
-        <button class="filter-btn" value="CSE">CSE</button>
-        <button class="filter-btn" value="WDD">WDD</button>
-      </div>
-
-      <div id="totalCreditsCert01"></div>
-      <div class="boxcertificate01"></div>
-
-      <div id="totalCreditsCert02"></div>
-      <div class="boxcertificate02"></div>
-
-      <div id="totalCreditsCert03"></div>
-      <div class="boxcertificate03"></div>
-
-      <div class="courses">
-        <div class="course-row">
-          <button class="courseButton">CSE 212</button>
-          <button class="courseButton">CSE 270</button>
-          <button class="courseButton">CSE 300</button>
-        </div>
-        <div class="course-row">
-          <button class="courseButton">CSE 310</button>
-          <button class="courseButton">CSE 325</button>
-          <button class="courseButton">CSE 370</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Common course detail sections -->
-    <div id="totalCredits"></div>
-    <div class="course-list"></div>
-    <dialog id="course-details"></dialog>
-  </main>
-
-  <footer>
-    <p>© <span id="currentyear"></span> Jacob Schumann | Provo, UT</p>
-    <p class="lastmodified">Last Modified: <span id="lastModified"></span></p>
-  </footer>
-
-  <script src="scripts/main.js" defer></script>
+    <script src="scripts/course.js"></script>
 </body>
-
 </html>
