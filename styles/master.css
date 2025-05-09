@@ -63,7 +63,7 @@ nav {
 }
 
 nav a {
-    display: inline-block;
+    display: block;
     padding: 1em 2em;
     text-decoration: none;
     position: relative;

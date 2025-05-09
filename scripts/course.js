@@ -72,7 +72,7 @@ function filterCourses(filter, containerId) {
 
     buttons.forEach(btn => {
         if (filter === 'all' || btn.classList.contains(filter)) {
-            btn.style.display = 'inline-block';
+            btn.style.display = 'block';
         } else {
             btn.style.display = 'none';
         }
