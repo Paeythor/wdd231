@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Course Home Page">
-<meta name="author" content="Jacob Schumann">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles/master.css">
-<title>Jacob Schumann - Course Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Course Home Page">
+    <meta name="author" content="Jacob Schumann">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/master.css">
+    <title>Jacob Schumann - Course Page</title>
 </head>
 <body>
     <header>
@@ -20,14 +20,14 @@
     </header>
 
     <nav>
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger Icon -->
-    <div class="nav-links">
-        <a href="#">Home</a>
-        <a href="#">Chamber</a>
-        <a href="#">Final</a>
-        <a href="https://github.com/Paeythor">GitHub Profile</a>
-        <a href="https://www.linkedin.com/in/jacob-c-schumann/">LinkedIn</a>
-    </div>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Chamber</a>
+            <a href="#">Final</a>
+            <a href="https://github.com/Paeythor">GitHub Profile</a>
+            <a href="https://www.linkedin.com/in/jacob-c-schumann/">LinkedIn</a>
+        </div>
     </nav>
 
     <main>
@@ -52,44 +52,47 @@
             </div>
         </section>
 
-        <section class="certificate">
+        <section class="certificate" id="web-computer-programming">
             <h2 class="section-header">
                 <a href="https://www.byupathway.edu/certificate/web-computer-programming">Web and Computer Programming Certificate</a>
             </h2>
             <div class="filters">
-                <button onclick="filterCourses('all', 'courses-web-computer-programming')">All</button>
-                <button onclick="filterCourses('CSE', 'courses-web-computer-programming')">CSE</button>
-                <button onclick="filterCourses('WDD', 'courses-web-computer-programming')">WDD</button>
+                <button onclick="filterCourses('all', 'courses-web-computer-programming', 'Web and Computer Programming')">All</button>
+                <button onclick="filterCourses('CSE', 'courses-web-computer-programming', 'Web and Computer Programming')">CSE</button>
+                <button onclick="filterCourses('WDD', 'courses-web-computer-programming', 'Web and Computer Programming')">WDD</button>
             </div>
             <div class="courses" id="courses-web-computer-programming"></div>
             <div id="course-info-web-computer-programming" class="card"></div>
+            <div id="total-credits-web-and-computer-programming" class="credit-total">Total Credits: 0</div>
         </section>
 
-        <section class="certificate">
+        <section class="certificate" id="web-development">
             <h2 class="section-header">
                 <a href="https://www.byupathway.edu/certificate/web-backend-development">Web Development Certificate</a>
             </h2>
             <div class="filters">
-                <button onclick="filterCourses('all', 'courses-web-development')">All</button>
-                <button onclick="filterCourses('CSE', 'courses-web-development')">CSE</button>
-                <button onclick="filterCourses('WDD', 'courses-web-development')">WDD</button>
-                <button onclick="filterCourses('ITM', 'courses-web-development')">ITM</button>
+                <button onclick="filterCourses('all', 'courses-web-development', 'Web Development')">All</button>
+                <button onclick="filterCourses('CSE', 'courses-web-development', 'Web Development')">CSE</button>
+                <button onclick="filterCourses('WDD', 'courses-web-development', 'Web Development')">WDD</button>
+                <button onclick="filterCourses('ITM', 'courses-web-development', 'Web Development')">ITM</button>
             </div>
             <div class="courses" id="courses-web-development"></div>
             <div id="course-info-web-development" class="card"></div>
+            <div id="total-credits-web-development" class="credit-total">Total Credits: 0</div>
         </section>
 
-        <section class="certificate">
+        <section class="certificate" id="software-development">
             <h2 class="section-header">
                 <a href="https://www.byupathway.edu/bachelors-degree/software-development">Software Development Certificate</a>
             </h2>
             <div class="filters">
-                <button onclick="filterCourses('all', 'courses-software-development')">All</button>
-                <button onclick="filterCourses('CSE', 'courses-software-development')">CSE</button>
-                <button onclick="filterCourses('WDD', 'courses-software-development')">WDD</button>
+                <button onclick="filterCourses('all', 'courses-software-development', 'Software Development')">All</button>
+                <button onclick="filterCourses('CSE', 'courses-software-development', 'Software Development')">CSE</button>
+                <button onclick="filterCourses('WDD', 'courses-software-development', 'Software Development')">WDD</button>
             </div>
             <div class="courses" id="courses-software-development"></div>
             <div id="course-info-software-development" class="card"></div>
+            <div id="total-credits-software-development" class="credit-total">Total Credits: 0</div>
         </section>
     </main>
 

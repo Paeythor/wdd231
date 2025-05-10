@@ -268,7 +268,7 @@ main {
 /* Course card styling */
 .course-card {
     background-color: #f4f4f4;
-    color: #ffcc00;
+    color: #bc9e27;
     padding: 20px;
     margin: 10px 0;
     border-radius: 5px;
@@ -295,4 +295,12 @@ footer {
 .flag {
     width: 30px;
     margin-top: 0.5rem;
+}
+.total-credits {
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #f2f2f2;
+    border-top: 1px solid #ccc;
+    font-weight: bold;
+    text-align: right;
 }
