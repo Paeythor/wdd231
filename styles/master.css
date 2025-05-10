@@ -1,14 +1,12 @@
-/* Reset and base styling */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #e3eaf4;
-    color: #333;
+    background-color: #ffffff;
+    color: #1a1a1a;
 }
 
-/* Header styling */
 header {
-    background-color: #0033a0;
+    background-color: #002b7f;
     color: #ffcc00;
     padding: 1rem;
     display: flex;
@@ -32,19 +30,17 @@ header {
     vertical-align: middle;
 }
 
-/* Heading styling */
 h2 {
-    color: #65a000;
-    border-bottom: 2px solid #dc1c13;
+    color: #1a4d00;
+    border-bottom: 2px solid #8b0000;
     padding-bottom: 0.3rem;
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
 
-/* Section header */
 .section-header {
-    background-color: #0033a0;
-    color: #ffcc00;
+    background-color: #002b7f;
+    color: #fff200;
     padding: 0.75rem 1rem;
     border-radius: 5px;
     font-size: 1.5rem;
@@ -54,21 +50,20 @@ h2 {
 }
 
 .section-header a {
-    color: #ffcc00;
+    color: #fff200;
     text-decoration: none;
 }
 
 .section-header a:hover {
     text-decoration: underline;
-    color: #f1c40f;
+    color: #f7d100;
 }
 
-/* Navigation bar */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #dc1c13;
+    background-color: #8b0000;
     padding: 0 1rem;
     position: relative;
 }
@@ -101,7 +96,7 @@ nav .nav-links a {
 
 nav .nav-links a:hover {
     background-color: #f1f4f6;
-    color: #0033a0;
+    color: #002b7f;
 }
 
 nav .nav-links a:hover::before {
@@ -118,7 +113,6 @@ nav .nav-links a:hover::before {
     pointer-events: none;
 }
 
-/* Responsive navigation */
 @media (max-width: 768px) {
     nav .hamburger {
         display: block;
@@ -127,7 +121,7 @@ nav .nav-links a:hover::before {
     nav .nav-links {
         display: none;
         flex-direction: column;
-        background-color: #dc1c13;
+        background-color: #8b0000;
         position: absolute;
         top: 60px;
         left: 0;
@@ -147,12 +141,10 @@ nav .nav-links a:hover::before {
     }
 }
 
-/* Main content */
 main {
     padding: 1rem;
 }
 
-/* Coursework section */
 .coursework {
     display: flex;
     flex-wrap: wrap;
@@ -162,7 +154,7 @@ main {
 
 .card {
     flex: 1 1 300px;
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 1rem;
@@ -173,7 +165,6 @@ main {
     border-radius: 10px;
 }
 
-/* Certificate filter buttons */
 .filters {
     display: flex;
     gap: 1rem;
@@ -182,8 +173,8 @@ main {
 }
 
 .filters button {
-    background-color: #0033a0;
-    color: white;
+    background-color: #002b7f;
+    color: #ffffff;
     border: none;
     padding: 0.5rem 1rem;
     cursor: pointer;
@@ -191,10 +182,9 @@ main {
 }
 
 .filters button:hover {
-    background-color: #002080;
+    background-color: #001f5c;
 }
 
-/* Course badges */
 .courses {
     display: flex;
     flex-wrap: wrap;
@@ -202,7 +192,7 @@ main {
 }
 
 .course {
-    color: white;
+    color: #ffffff;
     padding: 1rem;
     border-radius: 5px;
     flex: 1 0 30%;
@@ -212,15 +202,15 @@ main {
 }
 
 .course.completed {
-    background-color: #dc1c13;
+    background-color: #8b0000;
 }
 
 .course.in-progress {
-    background-color: #25cff9;
+    background-color: #0099cc;
 }
 
 .course.not-completed {
-    background-color: #2e7d32;
+    background-color: #006400;
 }
 
 .course:hover {
@@ -229,46 +219,43 @@ main {
 }
 
 .course.completed:hover {
-    background-color: #c2130d;
+    background-color: #a30000;
 }
 
 .course.in-progress:hover {
-    background-color: #00b0e6;
+    background-color: #0080b3;
 }
 
 .course.not-completed:hover {
-    background-color: #288c3b;
+    background-color: #005000;
 }
 
-/* Course button appearance */
 .courses button {
     margin: 5px;
     padding: 10px 15px;
     font-size: 1rem;
     border: 2px solid #005cbf;
     background-color: #e4002b;
-    color: #fff;
+    color: #ffffff;
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.2s ease;
     border-radius: 5px;
 }
 
 .courses button:hover {
-    background-color: #fcd116;
+    background-color: #ffc107;
     transform: scale(1.1);
 }
 
-/* Course info box */
 #course-info {
     border-top: 2px solid #005cbf;
     padding-top: 10px;
     font-size: 1.1rem;
 }
 
-/* Course card styling */
 .course-card {
     background-color: #f4f4f4;
-    color: #bc9e27;
+    color: #3c3c3c;
     padding: 20px;
     margin: 10px 0;
     border-radius: 5px;
@@ -283,9 +270,8 @@ main {
     margin: 5px 0;
 }
 
-/* Footer */
 footer {
-    background-color: #0033a0;
+    background-color: #002b7f;
     color: #ffcc00;
     text-align: center;
     padding: 1rem;
@@ -296,6 +282,7 @@ footer {
     width: 30px;
     margin-top: 0.5rem;
 }
+
 .total-credits {
     margin-top: 10px;
     padding: 8px;
