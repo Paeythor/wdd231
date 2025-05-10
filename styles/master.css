@@ -216,7 +216,7 @@ main {
 }
 
 .course.in-progress {
-    background-color: #f9a825;
+    background-color: #25cff9;
 }
 
 .course.not-completed {
@@ -233,7 +233,7 @@ main {
 }
 
 .course.in-progress:hover {
-    background-color: #e6b200;
+    background-color: #00b0e6;
 }
 
 .course.not-completed:hover {
