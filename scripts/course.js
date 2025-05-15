@@ -1,11 +1,10 @@
+document.getElementById("lastModified").innerHTML = document.lastModified;
 
-    document.getElementById("lastModified").innerHTML = document.lastModified;
+const today = new Date();
+const year = document.querySelector("#currentyear");
+year.innerHTML = `<span class="highlight">${today.getFullYear()}</span>`;
 
-    const today = new Date();
-    const year = document.querySelector("#currentyear");
-    year.innerHTML = `<span class="highlight">${today.getFullYear()}</span>`;
-
-    const courses = [{
+const courses = [{
         subject: 'CSE',
         number: 110,
         title: 'Introduction to Programming',
@@ -15,7 +14,8 @@
         technology: ['Python'],
         inProgress: false,
         completed: true
-    }, {
+    }, 
+    {
         subject: 'CSE',
         number: 111,
         title: 'Programming with Functions',
@@ -25,7 +25,8 @@
         technology: ['Python'],
         inProgress: false,
         completed: true
-    }, {
+    },
+    {
         subject: 'CSE',
         number: 210,
         title: 'Programming with Classes',
@@ -35,7 +36,8 @@
         technology: ['C#'],
         inProgress: false,
         completed: true
-    }, {
+    },
+    {
         subject: 'WDD',
         number: 130,
         title: 'Web Fundamentals',
@@ -45,7 +47,8 @@
         technology: ['HTML', 'CSS'],
         inProgress: true,
         completed: false
-    }, {
+    },
+    {
         subject: 'WDD',
         number: 131,
         title: 'Dynamic Web Fundamentals',
@@ -55,7 +58,8 @@
         technology: ['HTML', 'CSS', 'JavaScript'],
         inProgress: false,
         completed: true
-    }, {
+    },
+    {
         subject: 'WDD',
         number: 231,
         title: 'Frontend Web Development I',
@@ -65,7 +69,8 @@
         technology: ['HTML', 'CSS', 'JavaScript'],
         inProgress: true,
         completed: false
-    }, {
+    },
+    {
         subject: 'ITM',
         number: 111,
         title: 'Introduction to Databases',
@@ -75,7 +80,8 @@
         technology: ['Data Base', 'MySQL'],
         inProgress: false,
         completed: true
-    }, {
+    },
+    {
         subject: 'WDD',
         number: 330,
         title: 'Web Frontend Development II',
@@ -85,7 +91,8 @@
         technology: ['HTML', 'CSS', 'JavaScript'],
         inProgress: false,
         completed: false
-    }, {
+    },
+    {
         subject: 'CSE',
         number: 340,
         title: 'Web Backend Development',
@@ -95,7 +102,8 @@
         technology: ['Server Side'],
         inProgress: false,
         completed: false
-    }, {
+    },
+    {
         subject: 'CSE',
         number: 341,
         title: 'Web Services',
@@ -105,7 +113,8 @@
         technology: ['Server Side'],
         inProgress: false,
         completed: false
-    }, {
+    },
+    {
         subject: 'WDD',
         number: 430,
         title: 'Web Full-Stack Development',
@@ -115,7 +124,8 @@
         technology: ['Server Side'],
         inProgress: false,
         completed: false
-    }, {
+    },
+    {
         subject: 'CSE',
         number: 212,
         title: 'Programming w/Data Struct',
@@ -125,7 +135,8 @@
         technology: ['.NET', 'C#'],
         inProgress: false,
         completed: false
-    }, {
+    },
+    {
         subject: 'CSE',
         number: 270,
         title: 'Software Testing',
@@ -135,7 +146,8 @@
         technology: ['Software Testing'],
         inProgress: false,
         completed: false
-    }, {
+    },
+    {
         subject: 'CSE',
         number: 300,
         title: 'Professional Readiness',
@@ -145,7 +157,8 @@
         technology: [],
         inProgress: false,
         completed: false
-    }, {
+    },
+    {
         subject: 'CSE',
         number: 310,
         title: 'Applied Programming',
@@ -155,7 +168,8 @@
         technology: [],
         inProgress: false,
         completed: false
-    }, {
+    },
+    {
         subject: 'CSE',
         number: 325,
         title: '.NET Software Development',
@@ -165,7 +179,8 @@
         technology: [],
         inProgress: false,
         completed: false
-    }, {
+    },
+    {
         subject: 'CSE',
         number: 370,
         title: 'Software Eng. Principles',
@@ -175,165 +190,165 @@
         technology: [],
         inProgress: false,
         completed: false
-    }];
-
-    const courseCredits = {
-        'CSE110': 2,
-        'CSE111': 2,
-        'CSE210': 2,
-        'WDD130': 2,
-        'WDD131': 2,
-        'WDD231': 2,
-        'ITM111': 3,
-        'CSE340': 3,
-        'CSE341': 3,
-        'WDD330': 3,
-        'WDD430': 3,
-        'CSE212': 3,
-        'CSE270': 3,
-        'CSE300': 3,
-        'CSE310': 3,
-        'CSE325': 3,
-        'CSE370': 2
-    };
-
-    function calculateTotalCredits(filteredCourses) {
-        return filteredCourses.reduce((total, course) => total + course.credits, 0);
     }
+];
 
-    function updateTotalCreditsForCertificate(certificate, filteredCourses) {
-        const totalCreditsBox = document.getElementById(`total-credits-${certificate.replace(/\s+/g, '-').toLowerCase()}`);
-        const totalCredits = calculateTotalCredits(filteredCourses);
-        if (totalCreditsBox) {
-            totalCreditsBox.innerHTML = `Total Credits: ${totalCredits}`;
-        }
+const courseCredits = {
+    'CSE110': 2,
+    'CSE111': 2,
+    'CSE210': 2,
+    'WDD130': 2,
+    'WDD131': 2,
+    'WDD231': 2,
+    'ITM111': 3,
+    'CSE340': 3,
+    'CSE341': 3,
+    'WDD330': 3,
+    'WDD430': 3,
+    'CSE212': 3,
+    'CSE270': 3,
+    'CSE300': 3,
+    'CSE310': 3,
+    'CSE325': 3,
+    'CSE370': 2
+};
+
+function calculateTotalCredits(filteredCourses) {
+    return filteredCourses.reduce((total, course) => total + course.credits, 0);
+}
+
+function updateTotalCreditsForCertificate(certificate, filteredCourses) {
+    const totalCreditsBox = document.getElementById(`total-credits-${certificate.replace(/\s+/g, '-').toLowerCase()}`);
+    const totalCredits = calculateTotalCredits(filteredCourses);
+    if (totalCreditsBox) {
+        totalCreditsBox.innerHTML = `Total Credits: ${totalCredits}`;
     }
+}
 
-    function filterCourses(filter, containerId, certificateName) {
-        const container = document.getElementById(containerId);
-        container.innerHTML = '';
+function filterCourses(filter, containerId, certificateName) {
+    const container = document.getElementById(containerId);
+    container.innerHTML = '';
 
-        const filteredCourses = courses.filter(course =>
-            course.certificate === certificateName &&
-            (filter === 'all' || course.subject === filter)
-        );
+    const filteredCourses = courses.filter(course =>
+        course.certificate === certificateName &&
+        (filter === 'all' || course.subject === filter)
+    );
 
-        filteredCourses.forEach(course => {
-            const btn = document.createElement("button");
-            btn.textContent = `${course.subject} ${course.number}`;
-            btn.classList.add("course", course.subject);
-            btn.classList.add(course.completed ? "completed" : course.inProgress ? "in-progress" : "not-completed");
+    filteredCourses.forEach(course => {
+        const btn = document.createElement("button");
+        btn.textContent = `${course.subject} ${course.number}`;
+        btn.classList.add("course", course.subject);
+        btn.classList.add(course.completed ? "completed" : course.inProgress ? "in-progress" : "not-completed");
 
-            btn.addEventListener("dblclick", () => showCourseInfo(course));
-            container.appendChild(btn);
-        });
-
-        updateTotalCreditsForCertificate(certificateName, filteredCourses);
-    }
-
-    function showCourseInfo(course) {
-        const infoBoxMap = {
-            "Web and Computer Programming": "course-info-web-computer-programming",
-            "Web Development": "course-info-web-development",
-            "Software Development": "course-info-software-development"
-        };
-
-        const infoBoxId = infoBoxMap[course.certificate];
-        const infoBox = document.getElementById(infoBoxId);
-
-        if (infoBox) {
-            let status = course.completed ? "Completed" : course.inProgress ? "In Progress" : "Not Started";
-
-            infoBox.innerHTML = `
-                <h3>${course.subject} ${course.number}: ${course.title}</h3>
-                <p><strong>Credits:</strong> ${course.credits}</p>
-                <p><strong>Certificate:</strong> ${course.certificate}</p>
-                <p><strong>Description:</strong> ${course.description}</p>
-                <p><strong>Technologies:</strong> ${course.technology.join(", ")}</p>
-                <p><strong>Status:</strong> ${status}</p>
-            `;
-        }
-    }
-
-    const certificateIds = {
-        'Web and Computer Programming': 'web-computer-programming',
-        'Web Development': 'web-development',
-        'Software Development': 'software-development'
-    };
-
-    function updateCertificateProgress() {
-        Object.entries(certificateIds).forEach(([certificateName, idSuffix]) => {
-            const completedCredits = courses
-                .filter(course => course.certificate === certificateName && course.completed)
-                .reduce((sum, course) => sum + course.credits, 0);
-
-            const progressElem = document.getElementById(`progress-${idSuffix}`);
-            const labelElem = document.getElementById(`label-${idSuffix}`);
-
-            if (progressElem && labelElem) {
-                progressElem.value = completedCredits;
-                labelElem.textContent = `${completedCredits} / ${progressElem.max} Credits Earned`;
-            }
-        });
-    }
-
-    document.querySelectorAll(".filter-btn").forEach(button => {
-        button.addEventListener("click", () => {
-            const filter = button.dataset.filter;
-
-            const containers = [
-                { id: "courses-web-computer-programming", name: "Web and Computer Programming" },
-                { id: "courses-web-development", name: "Web Development" },
-                { id: "courses-software-development", name: "Software Development" }
-            ];
-
-            containers.forEach(c => filterCourses(filter, c.id, c.name));
-        });
+        btn.addEventListener("dblclick", () => showCourseInfo(course));
+        container.appendChild(btn);
     });
 
-    function updateSubjectStatus() {
-        const subjects = [...new Set(courses.map(course => course.subject))];
-        const container = document.getElementById("subject-status-container");
-        container.innerHTML = '';
+    updateTotalCreditsForCertificate(certificateName, filteredCourses);
+}
 
-        subjects.forEach(subject => {
-            const subjectCourses = courses.filter(course => course.subject === subject);
-            const total = subjectCourses.reduce((sum, course) => sum + course.credits, 0);
-            const completed = subjectCourses.filter(c => c.completed).reduce((sum, course) => sum + course.credits, 0);
-            const inProgress = subjectCourses.filter(c => c.inProgress && !c.completed).reduce((sum, course) => sum + course.credits, 0);
-            const notStarted = total - completed - inProgress;
+function showCourseInfo(course) {
+    const infoBoxMap = {
+        "Web and Computer Programming": "course-info-web-computer-programming",
+        "Web Development": "course-info-web-development",
+        "Software Development": "course-info-software-development"
+    };
 
-            const box = document.createElement('div');
-            box.classList.add('subject-status-box');
-            box.innerHTML = `
-                <h3>${subject}</h3>
-                <p>Completed: ${completed} Credits</p>
-                <p>In Progress: ${inProgress} Credits</p>
-                <p>Not Started: ${notStarted} Credits</p>
-                <div class="course-buttons">
-                    ${subjectCourses.map(course => `
-                        <button class="course ${course.completed ? 'completed' : course.inProgress ? 'in-progress' : 'not-completed'}">
-                            ${course.subject} ${course.number}: ${course.title}
-                        </button>
-                    `).join('')}
-                </div>
-            `;
-            container.appendChild(box);
-        });
+    const infoBoxId = infoBoxMap[course.certificate];
+    const infoBox = document.getElementById(infoBoxId);
+
+    if (infoBox) {
+        let status = course.completed ? "Completed" : course.inProgress ? "In Progress" : "Not Started";
+
+        infoBox.innerHTML = `
+            <h3>${course.subject} ${course.number}: ${course.title}</h3>
+            <p><strong>Credits:</strong> ${course.credits}</p>
+            <p><strong>Certificate:</strong> ${course.certificate}</p>
+            <p><strong>Description:</strong> ${course.description}</p>
+            <p><strong>Technologies:</strong> ${course.technology.join(", ")}</p>
+            <p><strong>Status:</strong> ${status}</p>
+        `;
     }
+}
 
-    updateCertificateProgress();
-    updateSubjectStatus();
-    filterCourses('all', 'courses-web-computer-programming', 'Web and Computer Programming');
-    filterCourses('all', 'courses-web-development', 'Web Development');
-    filterCourses('all', 'courses-software-development', 'Software Development');
+const certificateIds = {
+    'Web and Computer Programming': 'web-computer-programming',
+    'Web Development': 'web-development',
+    'Software Development': 'software-development'
+};
 
-    document.addEventListener("DOMContentLoaded", function() {
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
+function updateCertificateProgress() {
+    Object.entries(certificateIds).forEach(([certificateName, idSuffix]) => {
+        const completedCredits = courses
+            .filter(course => course.certificate === certificateName && course.completed)
+            .reduce((sum, course) => sum + course.credits, 0);
 
-        hamburger.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-        });
+        const progressElem = document.getElementById(`progress-${idSuffix}`);
+        const labelElem = document.getElementById(`label-${idSuffix}`);
+
+        if (progressElem && labelElem) {
+            progressElem.value = completedCredits;
+            labelElem.textContent = `${completedCredits} / ${progressElem.max} Credits Earned`;
+        }
     });
+}
 
+document.querySelectorAll(".filter-btn").forEach(button => {
+    button.addEventListener("click", () => {
+        const filter = button.dataset.filter;
+
+        const containers = [
+            { id: "courses-web-computer-programming", name: "Web and Computer Programming" },
+            { id: "courses-web-development", name: "Web Development" },
+            { id: "courses-software-development", name: "Software Development" }
+        ];
+
+        containers.forEach(c => filterCourses(filter, c.id, c.name));
+    });
+});
+
+function updateSubjectStatus() {
+    const subjects = [...new Set(courses.map(course => course.subject))];
+    const container = document.getElementById("subject-status-container");
+    container.innerHTML = '';
+
+    subjects.forEach(subject => {
+        const subjectCourses = courses.filter(course => course.subject === subject);
+        const total = subjectCourses.reduce((sum, course) => sum + course.credits, 0);
+        const completed = subjectCourses.filter(c => c.completed).reduce((sum, course) => sum + course.credits, 0);
+        const inProgress = subjectCourses.filter(c => c.inProgress && !c.completed).reduce((sum, course) => sum + course.credits, 0);
+        const notStarted = total - completed - inProgress;
+
+        const box = document.createElement('div');
+        box.classList.add('subject-status-box');
+        box.innerHTML = `
+            <h3>${subject}</h3>
+            <p>Completed: ${completed} Credits</p>
+            <p>In Progress: ${inProgress} Credits</p>
+            <p>Not Started: ${notStarted} Credits</p>
+            <div class="course-buttons">
+                ${subjectCourses.map(course => `
+                    <button class="course ${course.completed ? 'completed' : course.inProgress ? 'in-progress' : 'not-completed'}">
+                        ${course.subject} ${course.number}: ${course.title}
+                    </button>
+                `).join('')}
+            </div>
+        `;
+        container.appendChild(box);
+    });
+}
+
+updateCertificateProgress();
+updateSubjectStatus();
+filterCourses('all', 'courses-web-computer-programming', 'Web and Computer Programming');
+filterCourses('all', 'courses-web-development', 'Web Development');
+filterCourses('all', 'courses-software-development', 'Software Development');
+
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
+});
