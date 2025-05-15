@@ -175,6 +175,7 @@ const courses = [{
     inProgress: false,
     completed: false
 }];
+
 const courseCredits = {
     'CSE110': 2,
     'CSE111': 2,
@@ -207,43 +208,26 @@ function updateTotalCreditsForCertificate(certificate, filteredCourses) {
     }
 }
 
-function filterCourses(filter) {
-    const certificateContainers = {
-        "Web and Computer Programming": document.getElementById("courses-web-computer-programming"),
-        "Web Development": document.getElementById("courses-web-development"),
-        "Software Development": document.getElementById("courses-software-development")
-    };
+function filterCourses(filter, containerId, certificateName) {
+    const container = document.getElementById(containerId);
+    container.innerHTML = '';
 
-    for (let container of Object.values(certificateContainers)) {
-        container.innerHTML = '';
-    }
+    const filteredCourses = courses.filter(course =>
+        course.certificate === certificateName &&
+        (filter === 'all' || course.subject === filter)
+    );
 
-    courses.forEach(course => {
+    filteredCourses.forEach(course => {
         const btn = document.createElement("button");
         btn.textContent = `${course.subject} ${course.number}`;
         btn.classList.add("course", course.subject);
-        if (course.completed) {
-            btn.classList.add("completed");
-        } else if (course.inProgress) {
-            btn.classList.add("in-progress");
-        } else {
-            btn.classList.add("not-completed");
-        }
+        btn.classList.add(course.completed ? "completed" : course.inProgress ? "in-progress" : "not-completed");
 
         btn.addEventListener("dblclick", () => showCourseInfo(course));
-
-        const container = certificateContainers[course.certificate];
-        if (container) {
-            if (filter === 'all' || course.subject === filter) {
-                container.appendChild(btn);
-            }
-        }
+        container.appendChild(btn);
     });
 
-    Object.keys(certificateContainers).forEach(certificate => {
-        const filteredCourses = courses.filter(course => course.certificate === certificate && (filter === 'all' || course.subject === filter));
-        updateTotalCreditsForCertificate(certificate, filteredCourses);
-    });
+    updateTotalCreditsForCertificate(certificateName, filteredCourses);
 }
 
 function showCourseInfo(course) {
@@ -257,12 +241,7 @@ function showCourseInfo(course) {
     const infoBox = document.getElementById(infoBoxId);
 
     if (infoBox) {
-        let status = "Not Started";
-        if (course.completed) {
-            status = "Completed";
-        } else if (course.inProgress) {
-            status = "In Progress";
-        }
+        let status = course.completed ? "Completed" : course.inProgress ? "In Progress" : "Not Started";
 
         infoBox.innerHTML = `
             <h3>${course.subject} ${course.number}: ${course.title}</h3>
@@ -275,11 +254,69 @@ function showCourseInfo(course) {
     }
 }
 
-document.querySelectorAll('.filter-button').forEach(button => {
-    button.addEventListener('click', () => {
+const certificateIds = {
+    'Web and Computer Programming': 'web-computer-programming',
+    'Web Development': 'web-development',
+    'Software Development': 'software-development'
+};
+
+function updateCertificateProgress() {
+    Object.entries(certificateIds).forEach(([certificateName, idSuffix]) => {
+        const completedCredits = courses
+            .filter(course => course.certificate === certificateName && course.completed)
+            .reduce((sum, course) => sum + course.credits, 0);
+
+        const progressElem = document.getElementById(`progress-${idSuffix}`);
+        const labelElem = document.getElementById(`label-${idSuffix}`);
+
+        if (progressElem && labelElem) {
+            progressElem.value = completedCredits;
+            labelElem.textContent = `${completedCredits} / ${progressElem.max} Credits Earned`;
+        }
+    });
+}
+
+document.querySelectorAll(".filter-btn").forEach(button => {
+    button.addEventListener("click", () => {
         const filter = button.dataset.filter;
-        filterCourses(filter);
+
+        const containers = [
+            { id: "courses-web-computer-programming", name: "Web and Computer Programming" },
+            { id: "courses-web-development", name: "Web Development" },
+            { id: "courses-software-development", name: "Software Development" }
+        ];
+
+        containers.forEach(c => filterCourses(filter, c.id, c.name));
     });
 });
 
-filterCourses('all');
+function updateSubjectStatus() {
+    const subjects = [...new Set(courses.map(course => course.subject))];
+    const container = document.getElementById("subject-status-container");
+    container.innerHTML = '';
+
+    subjects.forEach(subject => {
+        const subjectCourses = courses.filter(course => course.subject === subject);
+        const total = subjectCourses.reduce((sum, course) => sum + course.credits, 0);
+        const completed = subjectCourses.filter(c => c.completed).reduce((sum, course) => sum + course.credits, 0);
+        const inProgress = subjectCourses.filter(c => c.inProgress && !c.completed).reduce((sum, course) => sum + course.credits, 0);
+        const notStarted = total - completed - inProgress;
+
+        const box = document.createElement('div');
+        box.classList.add('subject-status-box');
+        box.innerHTML = `
+            <h3>${subject}</h3>
+            <p>Completed: ${completed} Credits</p>
+            <p>In Progress: ${inProgress} Credits</p>
+            <p>Not Started: ${notStarted} Credits</p>
+        `;
+
+        container.appendChild(box);
+    });
+}
+
+updateCertificateProgress();
+updateSubjectStatus();
+filterCourses('all', 'courses-web-computer-programming', 'Web and Computer Programming');
+filterCourses('all', 'courses-web-development', 'Web Development');
+filterCourses('all', 'courses-software-development', 'Software Development');
