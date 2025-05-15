@@ -159,7 +159,7 @@ main {
 
 .card {
     flex: 1 1 300px;
-    background-color: #ffffff;
+    background-color: #124e8b;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 1rem;
@@ -267,8 +267,8 @@ main {
 }
 
 .course-card {
-    background-color: #f4f4f4;
-    color: #3c3c3c;
+    background-color: #ce1212;
+    color: #faf8f8;
     padding: 20px;
     margin: 10px 0;
     border-radius: 5px;
