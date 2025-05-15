@@ -311,3 +311,53 @@ footer {
   border-radius: 6px;
   background-color: #f9f9f9;
 }
+.course {
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 5px;
+    flex: 1 0 30%;
+    text-align: center;
+    font-weight: bold;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    margin: 5px;
+    width: auto;
+}
+
+.course.completed {
+    background-color: #8b0000; /* Dark Red for Completed */
+}
+
+.course.in-progress {
+    background-color: #0099cc; /* Blue for In Progress */
+}
+
+.course.not-completed {
+    background-color: #006400; /* Green for Not Completed */
+}
+
+.course:hover {
+    opacity: 0.85;
+    transform: scale(1.05);
+}
+
+.course.completed:hover {
+    background-color: #a30000;
+}
+
+.course.in-progress:hover {
+    background-color: #0080b3;
+}
+
+.course.not-completed:hover {
+    background-color: #005000;
+}
+
+
+.course-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}

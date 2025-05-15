@@ -309,8 +309,14 @@ function updateSubjectStatus() {
             <p>Completed: ${completed} Credits</p>
             <p>In Progress: ${inProgress} Credits</p>
             <p>Not Started: ${notStarted} Credits</p>
+            <div class="course-buttons">
+                ${subjectCourses.map(course => `
+                    <button class="course ${course.completed ? 'completed' : course.inProgress ? 'in-progress' : 'not-completed'}">
+                        ${course.subject} ${course.number}: ${course.title}
+                    </button>
+                `).join('')}
+            </div>
         `;
-
         container.appendChild(box);
     });
 }
