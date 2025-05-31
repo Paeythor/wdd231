@@ -4,7 +4,7 @@
     "address": "120 North 5000 West, Provo, UT 84601",
     "phone": "(801) 555-1234",
     "website": "https://www.provo-loco-cocoa.com",
-    "image": "images/provo-loco-cocoa.png",
+    "image": "images/provo-loco-cocoa.webp",
     "membershipLevel": 3,
     "description": "A local shop where all kinds of HOT chocolate are served."
   },
@@ -13,7 +13,7 @@
     "address": "456 Innovation Drive, Provo, UT 84604",
     "phone": "(801) 555-5678",
     "website": "https://www.techbro.com",
-    "image": "images/techbro-solutions.png",
+    "image": "images/techbro-solutions.webp",
     "membershipLevel": 1,
     "description": "We are like the Tech Bro you always wanted."
   },
@@ -22,7 +22,7 @@
     "address": "789 Trailblazer Lane, Provo, UT 84606",
     "phone": "(801) 555-9012",
     "website": "https://www.ymtb-rentals.com",
-    "image": "images/y-mountain-bike-rentals.png",
+    "image": "images/y-mountain-bike-rentals.webp",
     "membershipLevel": 1,
     "description": "Rent bikes and explore the beautiful trails in Provo."
   },
@@ -31,7 +31,7 @@
     "address": "2115 S University Ave, Provo, UT 84601",
     "phone": "(801) 555-1122",
     "website": "https://utahvalleywebsites.com/",
-    "image": "images/utah-valley-websites.png",
+    "image": "images/utah-valley-websites.webp",
     "membershipLevel": 1,
     "description": "Custom websites built for local businesses in Utah Valley."
   },
@@ -40,7 +40,7 @@
     "address": "4072 E Center Street, Provo, UT 84604",
     "phone": "(801) 555-3344",
     "website": "https://www.mjolnirmarketing.com/",
-    "image": "images/mjolnir-marketing.png",
+    "image": "images/mjolnir-marketing.webp",
     "membershipLevel": 1,
     "description": "Delivering thunderous digital marketing and impactful ad campaigns that strike the right chord."
   },
@@ -49,7 +49,7 @@
     "address": "1788 E 1230 S, Provo, UT 84606",
     "phone": "(801) 555-5566",
     "website": "https://celestialdating.com/",
-    "image": "images/celestial-dating.png",
+    "image": "images/celestial-dating.webp",
     "membershipLevel": 3,
     "description": "Connecting LDS singles in Provo with meaningful relationships through personalized matchmaking and community events."
   },
@@ -58,7 +58,7 @@
     "address": "1215 N 500 W, Provo, UT 84604",
     "phone": "(801) 555-7788",
     "website": "https://www.peppershock.com/",
-    "image": "images/peppershockmedia.png",
+    "image": "images/peppershockmedia.webp",
     "membershipLevel": 1,
     "description": "A full-service media and marketing agency with a local focus."
   },
@@ -67,7 +67,7 @@
     "address": "900 W 1230 S, Provo, UT 84601",
     "phone": "(801) 555-9900",
     "website": "https://flashtechnicalservices.com/",
-    "image": "images/flash-tech-services.png",
+    "image": "images/flash-tech-services.webp",
     "membershipLevel": 1,
     "description": "On-site and remote tech support for small businesses and home offices."
   },
@@ -76,7 +76,7 @@
     "address": "1725 E 500 S, Provo, UT 84606",
     "phone": "(801) 555-2233",
     "website": "https://www.metroexpresscarwash.com/",
-    "image": "images/metroexpress.png",
+    "image": "images/metroexpress.webp",
     "membershipLevel": 1,
     "description": "Fast and eco-friendly car wash services to keep your ride spotless."
   },
@@ -85,7 +85,7 @@
     "address": "950 Innovation Way, Provo, UT 84604",
     "phone": "(801) 555-7782",
     "website": "https://siliconpeaksit.com",
-    "image": "images/silicon-peaks-it.png",
+    "image": "images/silicon-peaks-it.webp",
     "membershipLevel": 3,
     "description": "Enterprise-level IT solutions and cybersecurity for Utah’s tech ecosystem."
   },
@@ -94,7 +94,7 @@
     "address": "456 Garden Blvd, Provo, UT 84604",
     "phone": "(801) 555-6677",
     "website": "https://dragonwokexpress.com",
-    "image": "images/dragon-wok-express.png",
+    "image": "images/dragon-wok-express.webp",
     "membershipLevel": 2,
     "description": "Fast and flavorful Chinese cuisine served fresh daily in the heart of Provo."
   },
@@ -103,7 +103,7 @@
     "address": "789 Bridal Lane, Provo, UT 84606",
     "phone": "(801) 555-9822",
     "website": "https://everaftereventsutah.com",
-    "image": "images/ever-after-events.png",
+    "image": "images/ever-after-events.webp",
     "membershipLevel": 3,
     "description": "Wedding and event planning services for unforgettable moments in Utah Valley."
   }
