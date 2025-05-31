@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
+  function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("active");
+  }
+
   const directory = document.getElementById('directory');
   const gridBtn = document.getElementById('toggle-grid');
   const listBtn = document.getElementById('toggle-list');
@@ -174,5 +178,10 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchMembers();
   });
 
+  document.getElementById('currentyear').textContent = new Date().getFullYear();
+  document.getElementById('lastModified').textContent = document.lastModified;
+
   fetchMembers();
+
+  window.toggleMenu = toggleMenu;
 });
