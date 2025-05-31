@@ -4,6 +4,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const listBtn = document.getElementById('toggle-list');
   let membersCache = null;
 
+  function createImage(src, alt, width = 200, height = 150) {
+    const img = document.createElement('img');
+    if (!src.startsWith('images/')) {
+      src = `images/${src}`;
+    }
+    img.src = src;
+    img.alt = alt;
+    img.width = width;
+    img.height = height;
+    img.onerror = () => {
+      img.src = 'images/default.png';
+      img.width = width;
+      img.height = height;
+    };
+    return img;
+  }
+
   const fetchMembers = async () => {
     try {
       if (!membersCache) {
@@ -92,12 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
           card.classList.add('member-card');
           if (membershipClass) card.classList.add(membershipClass);
 
-          const img = document.createElement('img');
-          img.src = image.startsWith('images/') ? image : `images/${image}`;
-          img.alt = `${name} logo`;
-          img.width = 200;
-          img.height = 150;
-          img.onerror = () => { img.src = 'images/default.png'; };
+          const img = createImage(image, `${name} logo`, 200, 150);
           card.appendChild(img);
 
           const h3 = document.createElement('h3');
