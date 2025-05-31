@@ -22,12 +22,24 @@
 <body>
   <header>
     <div class="header-content">
-      <img src="images/provo-chamberco2.png" alt="Provo Chamber of Commerce Logo" class="logo">
+      <img
+        src="images/provo-chamberco2.png"
+        alt="Provo Chamber of Commerce Logo"
+        class="logo"
+        width="200"
+        height="150"
+     >
     </div>
   </header>
 
   <nav>
-    <button class="hamburger" aria-label="Toggle navigation menu" onclick="toggleMenu()">&#9776;</button>
+    <button
+      class="hamburger"
+      aria-label="Toggle navigation menu"
+      onclick="toggleMenu()"
+    >
+      &#9776;
+    </button>
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="directory.html" aria-current="page">Directory</a>
@@ -39,20 +51,58 @@
   <main>
     <h1>Provo Chamber Directory | WDD 231</h1>
     <h2>Business Directory</h2>
-    <div class="view-toggle" role="group" aria-label="Toggle directory view">
-      <button id="toggle-grid" class="toggle-btn active" aria-pressed="true" aria-label="Grid View">
-        <img src="images/grid.png" alt="" class="icon" aria-hidden="true">
+    <div
+      class="view-toggle"
+      role="group"
+      aria-label="Toggle directory view"
+    >
+      <button
+        id="toggle-grid"
+        class="toggle-btn active"
+        aria-pressed="true"
+        aria-label="Grid View"
+      >
+        <img
+          src="images/grid.png"
+          alt=""
+          class="icon"
+          aria-hidden="true"
+          width="32"
+          height="32"
+       >
       </button>
-      <button id="toggle-list" class="toggle-btn" aria-pressed="false" aria-label="List View">
-        <img src="images/list.jpeg" alt="" class="icon" aria-hidden="true">
+      <button
+        id="toggle-list"
+        class="toggle-btn"
+        aria-pressed="false"
+        aria-label="List View"
+      >
+        <img
+          src="images/list.jpeg"
+          alt=""
+          class="icon"
+          aria-hidden="true"
+          width="32"
+          height="32"
+       >
       </button>
     </div>
-    <section id="directory" class="grid-view" aria-live="polite" aria-label="Business directory"></section>
+    <section
+      id="directory"
+      class="grid-view"
+      aria-live="polite"
+      aria-label="Business directory"
+    ></section>
   </main>
 
   <footer>
-    <p>&copy; <span id="currentyear"></span> Jacob C. Schumann | Provo, UT | WDD 231</p>
-    <p class="lastmodified">Last Modified: <span id="lastModified"></span></p>
+    <p>
+      &copy; <span id="currentyear"></span> Jacob C. Schumann | Provo, UT | WDD
+      231
+    </p>
+    <p class="lastmodified">
+      Last Modified: <span id="lastModified"></span>
+    </p>
 
     <address class="footer-contact">
       <strong>Provo Chamber of Commerce</strong><br>
@@ -63,9 +113,30 @@
     </address>
 
     <div class="footer-social" role="list">
-      <a href="#" role="listitem"><img src="images/youtube.webp" alt="YouTube" width="32" height="32"></a>
-      <a href="#" role="listitem"><img src="images/twitterx.png" alt="Twitter" width="32" height="32"></a>
-      <a href="#" role="listitem"><img src="images/linkedin.png" alt="LinkedIn" width="32" height="32"></a>
+      <a href="#" role="listitem">
+        <img
+          src="images/youtube.webp"
+          alt="YouTube"
+          width="32"
+          height="32"
+       >
+      </a>
+      <a href="#" role="listitem">
+        <img
+          src="images/twitterx.png"
+          alt="Twitter"
+          width="32"
+          height="32"
+       >
+      </a>
+      <a href="#" role="listitem">
+        <img
+          src="images/linkedin.png"
+          alt="LinkedIn"
+          width="32"
+          height="32"
+       >
+      </a>
     </div>
 
     <div class="footer-info">
@@ -79,9 +150,8 @@
   </footer>
 
   <script>
-    
     function toggleMenu() {
-      document.querySelector('.nav-links').classList.toggle('active');
+      document.querySelector(".nav-links").classList.toggle("active");
     }
   </script>
   <script src="scripts/members.js"></script>
