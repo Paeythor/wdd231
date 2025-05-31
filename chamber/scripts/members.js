@@ -2,26 +2,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const directory = document.getElementById('directory');
   const gridBtn = document.getElementById('toggle-grid');
   const listBtn = document.getElementById('toggle-list');
+  let membersCache = null;
 
   const fetchMembers = async () => {
     try {
-      const response = await fetch('data/members.json');
-      if (!response.ok) throw new Error('Network response was not ok');
-      const members = await response.json();
+      if (!membersCache) {
+        const response = await fetch('data/members.json');
+        if (!response.ok) throw new Error('Network response was not ok');
+        membersCache = await response.json();
+      }
+      const members = membersCache;
 
       directory.innerHTML = '';
 
       if (directory.classList.contains('list-view')) {
         const header = document.createElement('div');
         header.classList.add('list-row', 'list-header');
-
         const headers = ['Name', 'Phone', 'Address', 'Website', 'Description', 'Membership Level'];
         headers.forEach(text => {
           const div = document.createElement('div');
           div.textContent = text;
           header.appendChild(div);
         });
-
         directory.appendChild(header);
       }
 
@@ -95,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
           img.alt = `${name} logo`;
           img.width = 200;
           img.height = 150;
+          img.onerror = () => { img.src = 'images/default.png'; };
           card.appendChild(img);
 
           const h3 = document.createElement('h3');
@@ -141,7 +144,9 @@ document.addEventListener('DOMContentLoaded', () => {
     directory.classList.add('grid-view');
     directory.classList.remove('list-view');
     gridBtn.classList.add('active');
+    gridBtn.setAttribute('aria-pressed', 'true');
     listBtn.classList.remove('active');
+    listBtn.setAttribute('aria-pressed', 'false');
     directory.innerHTML = '';
     fetchMembers();
   });
@@ -150,7 +155,9 @@ document.addEventListener('DOMContentLoaded', () => {
     directory.classList.add('list-view');
     directory.classList.remove('grid-view');
     listBtn.classList.add('active');
+    listBtn.setAttribute('aria-pressed', 'true');
     gridBtn.classList.remove('active');
+    gridBtn.setAttribute('aria-pressed', 'false');
     directory.innerHTML = '';
     fetchMembers();
   });
