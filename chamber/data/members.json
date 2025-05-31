@@ -6,7 +6,7 @@
     "website": "https://www.provo-loco-cocoa.com",
     "image": "images/provo-loco-cocoa.png",
     "membershipLevel": 3,
-    "description": "A local shop where all kinds of HOT chocolate served."
+    "description": "A local shop where all kinds of HOT chocolate are served."
   },
   {
     "name": "TechBro Solutions",
@@ -36,24 +36,23 @@
     "description": "Custom websites built for local businesses in Utah Valley."
   },
   {
-  "name": "Mjolnir Marketing",
-  "address": "4072 E Center Street, Provo, UT 84604",
-  "phone": "(801) 555-3344",
-  "website": "https://www.mjolnirmarketing.com/",
-  "image": "images/mjolnir-marketing.png",
-  "membershipLevel": 1,
-  "description": "Delivering thunderous digital marketing and impactful ad campaigns that strike the right chord."
-},
+    "name": "Mjolnir Marketing",
+    "address": "4072 E Center Street, Provo, UT 84604",
+    "phone": "(801) 555-3344",
+    "website": "https://www.mjolnirmarketing.com/",
+    "image": "images/mjolnir-marketing.png",
+    "membershipLevel": 1,
+    "description": "Delivering thunderous digital marketing and impactful ad campaigns that strike the right chord."
+  },
   {
-  "name": "Celestial Dating",
-  "address": "1788 E 1230 S, Provo, UT 84606",
-  "phone": "(801) 555-5566",
-  "website": "https://celestialdating.com/",
-  "image": "images/celestial-dating.png",
-  "membershipLevel": 3,
-  "description": "Connecting LDS singles in Provo with meaningful relationships through personalized matchmaking and community events."
-}
-,
+    "name": "Celestial Dating",
+    "address": "1788 E 1230 S, Provo, UT 84606",
+    "phone": "(801) 555-5566",
+    "website": "https://celestialdating.com/",
+    "image": "images/celestial-dating.png",
+    "membershipLevel": 3,
+    "description": "Connecting LDS singles in Provo with meaningful relationships through personalized matchmaking and community events."
+  },
   {
     "name": "Peppershock Media",
     "address": "1215 N 500 W, Provo, UT 84604",
@@ -91,14 +90,14 @@
     "description": "Enterprise-level IT solutions and cybersecurity for Utah’s tech ecosystem."
   },
   {
-  "name": "Dragon Wok Express",
-  "address": "456 Garden Blvd, Provo, UT 84604",
-  "phone": "(801) 555-6677",
-  "website": "https://dragonwokexpress.com",
-  "image": "dragon-wok-express.png",
-  "membershipLevel": 2,
-  "description": "Fast and flavorful Chinese cuisine served fresh daily in the heart of Provo."
-},
+    "name": "Dragon Wok Express",
+    "address": "456 Garden Blvd, Provo, UT 84604",
+    "phone": "(801) 555-6677",
+    "website": "https://dragonwokexpress.com",
+    "image": "images/dragon-wok-express.png",
+    "membershipLevel": 2,
+    "description": "Fast and flavorful Chinese cuisine served fresh daily in the heart of Provo."
+  },
   {
     "name": "Ever After Events",
     "address": "789 Bridal Lane, Provo, UT 84606",
