@@ -1,80 +1,111 @@
 [
   {
-    "name": "Provo Coffee Co.",
-    "description": "A local coffee shop serving handcrafted drinks.",
-    "image": "images/provo-coffee-co.jpg",
-    "link": "https://www.provocoffee.com"
+    "name": "Provo Loco Cocoa.",
+    "address": "120 North 5000 West, Provo, UT 84601",
+    "phone": "(801) 555-1234",
+    "website": "https://www.provo-loco-cocoa.com",
+    "image": "images/provo-loco-cocoa.png",
+    "membership": 1,
+    "description": "A local all kinds of HOT chocolate served here."
   },
   {
-    "name": "TechPro Solutions",
-    "description": "Providing IT services and business solutions.",
-    "image": "images/techpro-solutions.jpg",
-    "link": "https://www.techpro.com"
+    "name": "TechBro Solutions",
+    "address": "456 Innovation Drive, Provo, UT 84604",
+    "phone": "(801) 555-5678",
+    "website": "https://www.techbro.com",
+    "image": "images/techbro-solutions.png",
+    "membership": 1,
+    "description": "We are like Tech Bro you always wanted."
   },
   {
-    "name": "Mountain Bike Rentals",
-    "description": "Rent bikes and explore the beautiful trails in Provo.",
-    "image": "images/mountain-bike-rentals.jpg",
-    "link": "https://www.mtb-rentals.com"
+    "name": "Y Mountain Bike Rentals",
+    "address": "789 Trailblazer Lane, Provo, UT 84606",
+    "phone": "(801) 555-9012",
+    "website": "https://www.ymtb-rentals.com",
+    "image": "images/y-mountain-bike-rentals.png",
+    "membership": 1,
+    "description": "Rent bikes and explore the beautiful trails in Provo."
   },
   {
-    "name": "Idaho Websites",
-    "address": "2115 S Vista Avenue Boise ID 83705",
-    "phone": "(208) 342-9386",
-    "website": "https://idahowebsites.com/"
+    "name": "Utah Valley Websites",
+    "address": "2115 S University Ave, Provo, UT 84601",
+    "phone": "(801) 555-1122",
+    "website": "https://utahvalleywebsites.com/",
+    "image": "images/utah-valley-websites.png",
+    "membership": 1,
+    "description": "Custom websites built for local businesses in Utah Valley."
   },
   {
-    "name": "Surge Web Design",
-    "address": "4072 E Arch Drive Meridian ID 83646",
-    "phone": "(208) 631-0640",
-    "website": "https://www.surgewebdesign.com/"
-  },
+  "name": "Mjolnir Marketing",
+  "address": "4072 E Center Street, Provo, UT 84604",
+  "phone": "(801) 555-3344",
+  "website": "https://www.mjolnirmarketing.com/",
+  "image": "images/mjolnir-marketing.png",
+  "membership": 1,
+  "description": "Delivering thunderous digital marketing and impactful ad campaigns that strike the right chord."
+},
   {
-    "name": "Graphic Zen",
-    "address": "1788 E Summerplace Court Meridian ID 83646",
-    "phone": "(208) 631-4984",
-    "website": "https://graphiczzen.com/"
-  },
+  "name": "Celestial Dating",
+  "address": "1788 E 1230 S, Provo, UT 84606",
+  "phone": "(801) 555-5566",
+  "website": "https://celestialdating.com/",
+  "image": "images/celestial-dating.png",
+  "membership": 1,
+  "description": "Connecting LDS singles in Provo with meaningful relationships through personalized matchmaking and community events."
+}
+,
   {
     "name": "Peppershock Media",
-    "address": "1215 3rd Street Nampa ID 83651",
-    "phone": "(208) 461-5070",
-    "website": "https://www.peppershock.com/"
+    "address": "1215 N 500 W, Provo, UT 84604",
+    "phone": "(801) 555-7788",
+    "website": "https://www.peppershock.com/",
+    "image": "images/peppershockmedia.png",
+    "membership": 1,
+    "description": "A full-service media and marketing agency with a local focus."
   },
   {
     "name": "Flash Tech Services",
-    "address": "Star Idaho 83669",
-    "phone": "(208) 488-5810",
-    "website": "https://flashtechnicalservices.com/"
+    "address": "900 W 1230 S, Provo, UT 84601",
+    "phone": "(801) 555-9900",
+    "website": "https://flashtechnicalservices.com/",
+    "image": "images/flash-tech-services.png",
+    "membership": 1,
+    "description": "On-site and remote tech support for small businesses and home offices."
   },
   {
     "name": "Metro Express Car Wash LLC",
-    "address": "1725 E Overland Road Meridian ID 83642",
-    "phone": "(208) 888-4073",
-    "website": "https://www.metroexpresscarwash.com/"
+    "address": "1725 E 500 S, Provo, UT 84606",
+    "phone": "(801) 555-2233",
+    "website": "https://www.metroexpresscarwash.com/",
+    "image": "images/metroexpress.png",
+    "membership": 1,
+    "description": "Fast and eco-friendly car wash services to keep your ride spotless."
   },
   {
-    "name": "Tech Solutions",
-    "logo": "logo1.png",
-    "phone": "123-456-7890",
-    "address": "123 Tech Street",
-    "website": "https://techsolutions.com",
-    "membership": "Gold"
+    "name": "Silicon Peaks IT",
+    "address": "950 Innovation Way, Provo, UT 84604",
+    "phone": "(801) 555-7782",
+    "website": "https://siliconpeaksit.com",
+    "image": "images/silicon-peaks-it.png",
+    "membership": 3,
+    "description": "Enterprise-level IT solutions and cybersecurity for Utah’s tech ecosystem."
   },
   {
-    "name": "Green Gardens",
-    "logo": "logo2.png",
-    "phone": "321-654-9870",
-    "address": "456 Garden Blvd",
-    "website": "https://greengardens.com",
-    "membership": "Silver"
-  },
+  "name": "Dragon Wok Express",
+  "address": "456 Garden Blvd, Provo, UT 84604",
+  "phone": "(801) 555-6677",
+  "website": "https://dragonwokexpress.com",
+  "image": "dragon-wok-express.png",
+  "membership": 2,
+  "description": "Fast and flavorful Chinese cuisine served fresh daily in the heart of Provo."
+},
   {
-    "name": "Fast Print",
-    "logo": "logo3.png",
-    "phone": "555-444-3333",
-    "address": "789 Print Ave",
-    "website": "https://fastprint.com",
-    "membership": "Bronze"
+    "name": "Ever After Events",
+    "address": "789 Bridal Lane, Provo, UT 84606",
+    "phone": "(801) 555-9822",
+    "website": "https://everaftereventsutah.com",
+    "image": "images/ever-after-events.png",
+    "membership": 1,
+    "description": "Wedding and event planning services for unforgettable moments in Utah Valley."
   }
 ]
