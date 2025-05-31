@@ -26,21 +26,23 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       members.forEach(member => {
-        const name = member.name || 'No name provided';
-        const phone = member.phone || 'No phone listed';
-        const address = member.address || 'No address listed';
-        const website = member.website || member.link || '#';
-        const description = member.description || '';
-        const image = member.image || member.logo || '';
-        const level = parseInt(member.membershipLevel) || 0;
+        const {
+          name = 'No name provided',
+          phone = 'No phone listed',
+          address = 'No address listed',
+          website = '#',
+          description = '',
+          image = 'images/default.png',
+          membershipLevel = 0
+        } = member;
 
-        const membershipLabel = level === 1 ? 'Standard Member' :
-                                level === 2 ? 'Silver Member' :
-                                level === 3 ? 'Gold Member' : 'Unknown';
+        const membershipLabel = membershipLevel === 1 ? 'Standard Member' :
+                                membershipLevel === 2 ? 'Silver Member' :
+                                membershipLevel === 3 ? 'Gold Member' : 'Unknown';
 
-        const membershipClass = level === 1 ? 'standard' :
-                                level === 2 ? 'silver' :
-                                level === 3 ? 'gold' : '';
+        const membershipClass = membershipLevel === 1 ? 'standard' :
+                                membershipLevel === 2 ? 'silver' :
+                                membershipLevel === 3 ? 'gold' : '';
 
         if (directory.classList.contains('list-view')) {
           const row = document.createElement('div');
