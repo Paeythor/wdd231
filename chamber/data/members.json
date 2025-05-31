@@ -5,7 +5,7 @@
     "phone": "(801) 555-1234",
     "website": "https://www.provo-loco-cocoa.com",
     "image": "images/provo-loco-cocoa.png",
-    "membership": 1,
+    "membershipLevel": 3,
     "description": "A local all kinds of HOT chocolate served here."
   },
   {
@@ -14,7 +14,7 @@
     "phone": "(801) 555-5678",
     "website": "https://www.techbro.com",
     "image": "images/techbro-solutions.png",
-    "membership": 1,
+    "membershipLevel": 1,
     "description": "We are like Tech Bro you always wanted."
   },
   {
@@ -23,7 +23,7 @@
     "phone": "(801) 555-9012",
     "website": "https://www.ymtb-rentals.com",
     "image": "images/y-mountain-bike-rentals.png",
-    "membership": 1,
+    "membershipLevel": 1,
     "description": "Rent bikes and explore the beautiful trails in Provo."
   },
   {
@@ -32,7 +32,7 @@
     "phone": "(801) 555-1122",
     "website": "https://utahvalleywebsites.com/",
     "image": "images/utah-valley-websites.png",
-    "membership": 1,
+    "membershipLevel": 1,
     "description": "Custom websites built for local businesses in Utah Valley."
   },
   {
@@ -41,7 +41,7 @@
   "phone": "(801) 555-3344",
   "website": "https://www.mjolnirmarketing.com/",
   "image": "images/mjolnir-marketing.png",
-  "membership": 1,
+  "membershipLevel": 1,
   "description": "Delivering thunderous digital marketing and impactful ad campaigns that strike the right chord."
 },
   {
@@ -50,7 +50,7 @@
   "phone": "(801) 555-5566",
   "website": "https://celestialdating.com/",
   "image": "images/celestial-dating.png",
-  "membership": 1,
+  "membershipLevel": 3,
   "description": "Connecting LDS singles in Provo with meaningful relationships through personalized matchmaking and community events."
 }
 ,
@@ -60,7 +60,7 @@
     "phone": "(801) 555-7788",
     "website": "https://www.peppershock.com/",
     "image": "images/peppershockmedia.png",
-    "membership": 1,
+    "membershipLevel": 1,
     "description": "A full-service media and marketing agency with a local focus."
   },
   {
@@ -69,7 +69,7 @@
     "phone": "(801) 555-9900",
     "website": "https://flashtechnicalservices.com/",
     "image": "images/flash-tech-services.png",
-    "membership": 1,
+    "membershipLevel": 1,
     "description": "On-site and remote tech support for small businesses and home offices."
   },
   {
@@ -78,7 +78,7 @@
     "phone": "(801) 555-2233",
     "website": "https://www.metroexpresscarwash.com/",
     "image": "images/metroexpress.png",
-    "membership": 1,
+    "membershipLevel": 1,
     "description": "Fast and eco-friendly car wash services to keep your ride spotless."
   },
   {
@@ -87,7 +87,7 @@
     "phone": "(801) 555-7782",
     "website": "https://siliconpeaksit.com",
     "image": "images/silicon-peaks-it.png",
-    "membership": 3,
+    "membershipLevel": 3,
     "description": "Enterprise-level IT solutions and cybersecurity for Utah’s tech ecosystem."
   },
   {
@@ -96,7 +96,7 @@
   "phone": "(801) 555-6677",
   "website": "https://dragonwokexpress.com",
   "image": "dragon-wok-express.png",
-  "membership": 2,
+  "membershipLevel": 2,
   "description": "Fast and flavorful Chinese cuisine served fresh daily in the heart of Provo."
 },
   {
@@ -105,7 +105,7 @@
     "phone": "(801) 555-9822",
     "website": "https://everaftereventsutah.com",
     "image": "images/ever-after-events.png",
-    "membership": 1,
+    "membershipLevel": 3,
     "description": "Wedding and event planning services for unforgettable moments in Utah Valley."
   }
 ]

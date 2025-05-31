@@ -71,6 +71,11 @@ nav .hamburger {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.nav-links a.active {
+  background-color: #f1f4f6;
+  color: #002b7f;
+}
+
 .nav-links a:hover {
   background-color: #f1f4f6;
   color: #002b7f;
@@ -236,9 +241,63 @@ footer {
 .list-view .card:nth-child(even) {
   background: #eef5f8;
 }
+
 .footer-social img {
   width: 32px;
   height: 32px;
   margin: 0 0.5rem;
   object-fit: contain;
+}
+
+.list-row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+
+/* Alternating row colors for list view */
+.list-row:nth-child(odd) {
+  background-color: white;
+}
+
+.list-row:nth-child(even) {
+  background-color: lightblue;
+}
+
+/* Membership border colors */
+.member-card.standard {
+  border: 2px solid forestgreen;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.member-card.silver {
+  border: 2px solid silver;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.member-card.gold {
+  border: 2px solid gold;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* For list-row borders in list view */
+.list-row.standard {
+  border-left: 6px solid forestgreen;
+}
+
+.list-row.silver {
+  border-left: 6px solid silver;
+}
+
+.list-row.gold {
+  border-left: 6px solid gold;
 }
