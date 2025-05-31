@@ -21,37 +21,60 @@
     "name": "Idaho Websites",
     "address": "2115 S Vista Avenue Boise ID 83705",
     "phone": "(208) 342-9386",
-    "url": "https://idahowebsites.com/"
+    "website": "https://idahowebsites.com/"
   },
   {
     "name": "Surge Web Design",
     "address": "4072 E Arch Drive Meridian ID 83646",
     "phone": "(208) 631-0640",
-    "url": "https://www.surgewebdesign.com/"
+    "website": "https://www.surgewebdesign.com/"
   },
   {
     "name": "Graphic Zen",
     "address": "1788 E Summerplace Court Meridian ID 83646",
     "phone": "(208) 631-4984",
-    "url": "https://graphiczzen.com/"
+    "website": "https://graphiczzen.com/"
   },
   {
     "name": "Peppershock Media",
     "address": "1215 3rd Street Nampa ID 83651",
     "phone": "(208) 461-5070",
-    "url": "https://www.peppershock.com/"
+    "website": "https://www.peppershock.com/"
   },
   {
     "name": "Flash Tech Services",
     "address": "Star Idaho 83669",
     "phone": "(208) 488-5810",
-    "url": "https://flashtechnicalservices.com/"
+    "website": "https://flashtechnicalservices.com/"
   },
   {
     "name": "Metro Express Car Wash LLC",
     "address": "1725 E Overland Road Meridian ID 83642",
     "phone": "(208) 888-4073",
-    "url": "https://www.metroexpresscarwash.com/"
+    "website": "https://www.metroexpresscarwash.com/"
+  },
+  {
+    "name": "Tech Solutions",
+    "logo": "logo1.png",
+    "phone": "123-456-7890",
+    "address": "123 Tech Street",
+    "website": "https://techsolutions.com",
+    "membership": "Gold"
+  },
+  {
+    "name": "Green Gardens",
+    "logo": "logo2.png",
+    "phone": "321-654-9870",
+    "address": "456 Garden Blvd",
+    "website": "https://greengardens.com",
+    "membership": "Silver"
+  },
+  {
+    "name": "Fast Print",
+    "logo": "logo3.png",
+    "phone": "555-444-3333",
+    "address": "789 Print Ave",
+    "website": "https://fastprint.com",
+    "membership": "Bronze"
   }
 ]
-

@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+form {
+  max-width: 600px;
+  margin: 1rem auto;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.membership-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem auto;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  flex: 1 1 200px;
+  background: #f9f9f9;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 400px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .membership-cards {
+    flex-direction: column;
+  }
+}

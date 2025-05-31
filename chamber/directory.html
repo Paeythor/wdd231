@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Directory page for the Provo Chamber of Commerce featuring local business listings.">
   <meta name="author" content="Jacob C. Schumann">
-
+  
   <meta property="og:title" content="Provo Chamber of Commerce - Directory">
   <meta property="og:description" content="Discover and support local businesses in Provo through our Chamber of Commerce directory.">
   <meta property="og:url" content="https://paeythor.github.io/wdd231/chamber/directory.html">
@@ -13,12 +13,6 @@
   <meta property="og:image" content="https://paeythor.github.io/wdd231/chamber/images/og-image.jpg">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Provo Chamber Directory">
-  <meta property="article:author" content="https://www.facebook.com/jacob.schumann.31">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@JacobCSchumann">
-  <meta name="twitter:title" content="Provo Chamber Directory">
-  <meta name="twitter:description" content="Find Provo businesses, services, and opportunities through our interactive Chamber directory.">
   <meta name="twitter:image" content="https://paeythor.github.io/wdd231/chamber/images/og-image.jpg">
 
   <link rel="icon" href="images/favicon.ico">
@@ -38,42 +32,88 @@
   <nav>
     <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
     <div class="nav-links">
-      <a href="../index.html">Home</a>
+      <a href="index.html">Home</a>
       <a href="directory.html">Directory</a>
-      <a href="#">Events</a>
-      <a href="https://github.com/Paeythor" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.linkedin.com/in/jacob-c-schumann/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="join.html">Join</a>
+      <a href="#">Discover</a>
     </div>
   </nav>
 
   <main>
     <h2>Business Directory</h2>
-
     <div class="view-toggle">
       <button id="toggle-grid" class="toggle-btn active" aria-label="Grid View">
-        <img src="images/grid.png" alt="Grid View" class="icon" />
+        <img src="images/grid.png" alt="Grid View" class="icon">
       </button>
       <button id="toggle-list" class="toggle-btn" aria-label="List View">
-        <img src="images/list.jpeg" alt="List View" class="icon" />
+        <img src="images/list.jpeg" alt="List View" class="icon">
       </button>
     </div>
-
-    <section id="directory" class="grid-view">
-      
+    <section id="directory" class="grid-view"></section>
+  </main>
+<section class="business-section">
+      <div class="business-card">
+        <h3>Business Name</h3>
+        <p>Business Tag Line</p>
+        <img src="biz1.jpg" alt="Business image">
+        <p><strong>EMAIL:</strong> info@gmail.com</p>
+        <p><strong>PHONE:</strong> 800-555-1234</p>
+        <p><strong>URL:</strong> mybusiness.com</p>
+      </div>
+      <div class="business-card">
+        <h3>Business Name</h3>
+        <p>Business Tag Line</p>
+        <img src="biz2.jpg" alt="Business image">
+        <p><strong>EMAIL:</strong> info@gmail.com</p>
+        <p><strong>PHONE:</strong> 800-555-1234</p>
+        <p><strong>URL:</strong> mybusiness.com</p>
+      </div>
+      <div class="business-card">
+        <h3>Business Name</h3>
+        <p>Business Tag Line</p>
+        <img src="biz3.jpg" alt="Business image">
+        <p><strong>EMAIL:</strong> info@gmail.com</p>
+        <p><strong>PHONE:</strong> 800-555-1234</p>
+        <p><strong>URL:</strong> mybusiness.com</p>
+      </div>
     </section>
   </main>
 
   <footer>
     <p>&copy; <span id="currentyear"></span> Jacob C. Schumann | Provo, UT | WDD 231</p>
     <p class="lastmodified">Last Modified: <span id="lastModified"></span></p>
+
+    <div class="footer-contact">
+      <p>
+        <strong>Provo Chamber of Commerce</strong><br>
+        111 Center Street<br>
+        Provo, UT 84601<br>
+        <a href="mailto:info@provocc.org">info@provocc.org</a><br>
+        (801) 555-2300
+      </p>
+    </div>
+
+    <div class="footer-social">
+      <a href="#"><img src="images/Youtube.webp" alt="YouTube"></a>
+      <a href="#"><img src="images/twitterX.png" alt="Twitter"></a>
+      <a href="#"><img src="images/LinkedIn.png" alt="LinkedIn"></a>
+    </div>
+
+    <div class="footer-info">
+      <p>
+        WDD231 Class Project<br>
+        Jacob Schumann<br>
+        &copy; 2025 Provo Chamber of Commerce<br>
+        Last Modification: 05/23/2025 14:00:00
+      </p>
+    </div>
   </footer>
 
   <script src="scripts/main.js"></script>
+  <script src="scripts/weather2.js"></script>
   <script>
     document.getElementById("currentyear").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent = document.lastModified;
-
-    
   </script>
 </body>
 </html>

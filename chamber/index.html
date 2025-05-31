@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chamber of Commerce | Home</title>
+  <link rel="stylesheet" href="styles/styles.css"/>
+  <script defer src="scripts/weather.js"></script>
+  <script defer src="scripts/spotlight.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Local Chamber of Commerce</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="#">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="images/hero.jpg" alt="Cityscape">
+      <div class="cta">
+        <a href="#">Join the Chamber Today!</a>
+      </div>
+    </section>
+
+    <section class="events">
+      <h2>Upcoming Events</h2>
+      <ul>
+        <li>May 25: Spring Networking Social</li>
+        <li>June 3: Business Fair Downtown</li>
+      </ul>
+    </section>
+
+    <section class="weather">
+      <h2>Current Weather</h2>
+      <p id="weather-description"></p>
+      <p>Temperature: <span id="temp"></span>°F</p>
+      <div id="forecast"></div>
+    </section>
+
+    <section class="spotlights">
+      <h2>Business Spotlights</h2>
+      <div id="spotlight-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Local Chamber | Contact Us</p>
+  </footer>
+</body>
+</html>

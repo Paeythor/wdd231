@@ -1,10 +1,10 @@
-// Load the JSON data and render it
+
 fetch('members.json')
   .then(response => response.json())
   .then(data => renderDirectory(data))
   .catch(error => console.error("Error loading the directory data:", error));
 
-// Render cards into the #directory container
+
 function renderDirectory(data) {
   const directoryContainer = document.getElementById('directory');
   directoryContainer.innerHTML = '';

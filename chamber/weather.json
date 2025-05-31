@@ -1,0 +1,72 @@
+{
+  "location": {
+    "city": "Provo",
+    "state": "UT",
+    "country": "US",
+    "latitude": 40.21889,
+    "longitude": -111.72333,
+    "elevation": 1370.7
+  },
+  "station": {
+    "name": "Provo Airport, UT US",
+    "wbans": ["24174"],
+    "forecast": {
+      "current": {
+        "temperature": 76,
+        "condition": "Sunny",
+        "unit": "F"
+      },
+      "daily": [
+        {
+          "date": "2025-05-23",
+          "high": 84,
+          "low": 55,
+          "condition": "Sunny",
+          "unit": "F"
+        },
+        {
+          "date": "2025-05-24",
+          "high": 78,
+          "low": 51,
+          "condition": "Partly sunny with a thunderstorm in spots in the afternoon",
+          "unit": "F"
+        },
+        {
+          "date": "2025-05-25",
+          "high": 75,
+          "low": 51,
+          "condition": "Mostly sunny and nice",
+          "unit": "F"
+        },
+        {
+          "date": "2025-05-26",
+          "high": 82,
+          "low": 56,
+          "condition": "Variable clouds",
+          "unit": "F"
+        },
+        {
+          "date": "2025-05-27",
+          "high": 82,
+          "low": 54,
+          "condition": "Sun through high clouds",
+          "unit": "F"
+        },
+        {
+          "date": "2025-05-28",
+          "high": 80,
+          "low": 56,
+          "condition": "Rather cloudy",
+          "unit": "F"
+        },
+        {
+          "date": "2025-05-29",
+          "high": 85,
+          "low": 58,
+          "condition": "Mostly cloudy",
+          "unit": "F"
+        }
+      ]
+    }
+  }
+}

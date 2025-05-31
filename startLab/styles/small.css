@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+
+#openButton1 {
+  background-color: #d62828; 
+  color: white;
+}
+
+#openButton2 {
+  background-color: #f77f00; 
+  color: white;
+}
+
+#openButton3 {
+  background-color: #fcbf49; 
+  color: #000;
+}
+
+#openButton1,
+#openButton2,
+#openButton3 {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+#dialogBox {
+  background-color: #f3f0ff; 
+  padding: 20px;
+  border: 2px solid #888;
+  border-radius: 8px;
+  min-width: 250px;
+}
+
+
+#closeButton {
+  background-color: #9d4edd; 
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+
+::backdrop {
+  background-color: rgba(255, 128, 0, 0.5); 
+}

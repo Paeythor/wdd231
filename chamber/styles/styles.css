@@ -1,0 +1,71 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background: #003366;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+.cta {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 1rem;
+}
+
+.weather, .events, .spotlights {
+  padding: 1rem;
+}
+
+.spotlight-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin: 1rem 0;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .spotlights {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .spotlight-card {
+    width: 30%;
+    flex-direction: column;
+    align-items: start;
+  }
+}
