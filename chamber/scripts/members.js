@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     img.width = width;
     img.height = height;
     img.onerror = () => {
-      img.src = 'images/default.png';
+      img.src = 'images/default.webp';
       img.width = width;
       img.height = height;
     };
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
           address = 'No address listed',
           website = '#',
           description = '',
-          image = 'images/default.png',
+          image = 'images/default.webp',
           membershipLevel = 0
         } = member;
 

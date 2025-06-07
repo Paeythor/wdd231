@@ -1,58 +1,35 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const weatherDiv = document.getElementById("current-weather");
-  const forecastDiv = document.getElementById("weather-forecast");
+const apiKey = '6d50d0133c6cfbea5c06e3f742f0e33b';
+const city = 'Provo';
+const units = 'imperial'; // Use 'metric' for Celsius
 
-  const lat = 40.2338;
-  const lon = -111.6585;
+const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},US&units=${units}&appid=${apiKey}`;
 
-  fetch(`https://api.weather.gov/points/${lat},${lon}`)
-    .then(response => response.json())
-    .then(data => {
-      const forecastUrl = data.properties.forecast;
-      const observationStationsUrl = data.properties.observationStations;
+fetch(url)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Weather data not available');
+    }
+    return response.json();
+  })
+  .then(data => {
+    const weatherDiv = document.getElementById('current-weather');
+    const temperature = Math.round(data.main.temp);
+    const condition = data.weather[0].description;
+    const humidity = data.main.humidity;
+    const wind = Math.round(data.wind.speed);
+    const icon = data.weather[0].icon;
+    const iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
 
-      
-      fetch(forecastUrl)
-        .then(response => response.json())
-        .then(forecastData => {
-          const periods = forecastData.properties.periods;
-          weatherDiv.innerHTML = `
-            <strong>${periods[0].temperature}°${periods[0].temperatureUnit}</strong><br>
-            ${periods[0].shortForecast}<br>
-            Wind: ${periods[0].windSpeed} ${periods[0].windDirection}
-          `;
-        })
-        .catch(() => {
-          weatherDiv.innerHTML = "Forecast data unavailable.";
-        });
-
-      
-      fetch(observationStationsUrl)
-        .then(response => response.json())
-        .then(stationsData => {
-          const stationId = stationsData.features[0].properties.stationIdentifier;
-          const observationUrl = `https://api.weather.gov/stations/${stationId}/observations/latest`;
-
-          fetch(observationUrl)
-            .then(response => response.json())
-            .then(observationData => {
-              const { temperature, humidity, windSpeed, windDirection } = observationData.properties;
-              weatherDiv.innerHTML += `
-                <br><strong>Current Conditions:</strong><br>
-                Temperature: ${temperature.value}°${temperature.unitCode}<br>
-                Humidity: ${humidity.value}%<br>
-                Wind: ${windSpeed.value} ${windSpeed.unitCode} ${windDirection}
-              `;
-            })
-            .catch(() => {
-              weatherDiv.innerHTML += "<br>Current observation data unavailable.";
-            });
-        })
-        .catch(() => {
-          weatherDiv.innerHTML += "<br>Observation stations data unavailable.";
-        });
-    })
-    .catch(() => {
-      weatherDiv.innerHTML = "Weather data unavailable.";
-    });
-});
+    weatherDiv.innerHTML = `
+      <h3>${data.name} Weather</h3>
+      <img src="${iconUrl}" alt="${condition}">
+      <p><strong>Temperature:</strong> ${temperature}°F</p>
+      <p><strong>Condition:</strong> ${condition}</p>
+      <p><strong>Humidity:</strong> ${humidity}%</p>
+      <p><strong>Wind Speed:</strong> ${wind} mph</p>
+    `;
+  })
+  .catch(error => {
+    document.getElementById('current-weather').textContent = 'Unable to load weather data.';
+    console.error(error);
+  });
