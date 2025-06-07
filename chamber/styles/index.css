@@ -225,3 +225,50 @@ footer {
 .cta-button:hover {
   background-color: #ffd166;
 }
+body.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-theme .top-bar,
+body.dark-theme footer {
+  background-color: #1f1f1f;
+  color: #ffffff;
+}
+
+body.dark-theme .business-card,
+body.dark-theme .spotlight-card,
+body.dark-theme .events,
+body.dark-theme .weather,
+body.dark-theme .forecast {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border-color: #333;
+}
+
+body.dark-theme a {
+  color: #f9c74f;
+}
+
+body.dark-theme .cta-button {
+  background-color: #f9c74f;
+  color: #121212;
+}
+
+body.dark-theme .cta-button:hover {
+  background-color: #ffd166;
+}
+body.dark-theme .spotlights {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+body.dark-theme .call-to-action {
+  background-color: #1f1f1f;
+  color: #ffffff;
+}
+
+body.dark-theme .call-to-action h2,
+body.dark-theme .call-to-action p {
+  color: #ffffff;
+}
