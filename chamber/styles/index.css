@@ -52,7 +52,7 @@ nav a {
   right: 20px;
   bottom: 20px;
   padding: 10px 20px;
-  background: rgba(0, 0, 0, 0.6); /* Use this to keep your darkened overlay */
+  background: rgba(0, 0, 0, 0.6);
   color: white;
   border: none;
   cursor: pointer;
@@ -103,16 +103,32 @@ main {
 }
 
 .business-card {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem;
   background: white;
-  padding: 15px;
   border: 1px solid #ccc;
-  flex: 1;
   color: #333;
+  flex: 1;
   min-width: 280px;
 }
 
 .business-card img {
   width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.business-item {
+  flex: 1 1 30%;
+  text-align: center;
+  min-width: 200px;
+}
+
+.business-item img {
+  max-width: 100%;
   height: auto;
   margin-bottom: 10px;
 }
@@ -168,6 +184,10 @@ footer {
 
   .info-grid > div, .business-card, .spotlight-card {
     width: 100%;
+  }
+
+  .business-item {
+    flex: 1 1 100%;
   }
 }
 
