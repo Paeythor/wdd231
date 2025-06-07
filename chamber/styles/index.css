@@ -213,9 +213,10 @@ footer {
 }
 
 .footer-social img {
-  width: 24px;
+  width: auto;      
+  height: 32px;     
   margin-right: 10px;
-  filter: brightness(0) invert(1);
+  filter: none;
 }
 
 /* Responsive Styles */
