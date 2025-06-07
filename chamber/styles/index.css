@@ -58,6 +58,48 @@ nav a {
   cursor: pointer;
 }
 
+/* Call to Action Overlay on Hero */
+.call-to-action {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 51, 102, 0.85); /* semi-transparent background */
+  color: white;
+  padding: 30px 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  text-align: center;
+}
+
+.call-to-action h2,
+.call-to-action p {
+  margin: 0 0 10px 0;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button {
+  background-color: #f9c74f;
+  color: #003366;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border: none;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #ffd166;
+}
+
 /* Main Content */
 main {
   padding: 20px;
@@ -191,40 +233,7 @@ footer {
   }
 }
 
-/* Call to Action Section */
-.call-to-action {
-  text-align: center;
-  background-color: #003366;
-  color: white;
-  padding: 40px 20px;
-  margin: 40px 0 0 0;
-}
-
-.call-to-action h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.call-to-action p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-}
-
-.cta-button {
-  background-color: #f9c74f;
-  color: #003366;
-  padding: 12px 25px;
-  font-size: 1rem;
-  border: none;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #ffd166;
-}
+/* Dark Theme Styles */
 body.dark-theme {
   background-color: #121212;
   color: #ffffff;
@@ -258,13 +267,14 @@ body.dark-theme .cta-button {
 body.dark-theme .cta-button:hover {
   background-color: #ffd166;
 }
+
 body.dark-theme .spotlights {
   background-color: #1a1a1a;
   color: #ffffff;
 }
 
 body.dark-theme .call-to-action {
-  background-color: #1f1f1f;
+  background-color: rgba(31, 31, 31, 0.9);
   color: #ffffff;
 }
 
