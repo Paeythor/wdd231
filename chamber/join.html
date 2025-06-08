@@ -16,18 +16,18 @@
 
   <link rel="icon" href="images/favicon.ico">
   <link rel="stylesheet" href="styles/join.css">
- 
-  
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-
   <title>Join Provo Chamber of Commerce</title>
 </head>
 <body>
+  
+  <img src="images/chamber_bg.jpg" alt="Chamber Background" class="background-hero">
+
   <header>
     <div class="header-content">
       <img src="images/provo-chamberco2.png" alt="Provo Chamber of Commerce Logo" class="logo">
       <h1>Join Provo Chamber of Commerce | WDD 231</h1>
-      <button class="hero-button"></button>
+      <button class="hero-button">Keynote Tickets</button>
     </div>
   </header>
 
@@ -38,97 +38,100 @@
       <a href="directory.html">Directory</a>
       <a href="join.html">Join</a>
       <a href="#">Discover</a>
+      <button id="toggle-theme">🌓</button>
     </div>
   </nav>
 
   <main>
     <div class="two-column-layout">
-    <div class="form-wrapper">
-      <form method="get" action="thankyou.html">
-        <label>First Name:
-          <input type="text" name="fname" required autocomplete="given-name">
-        </label>
-        <label>Last Name:
-          <input type="text" name="lname" required autocomplete="family-name">
-        </label>
-        <label>Organizational Title:
-          <input type="text" name="orgtitle" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
-        </label>
-        <label>Email:
-          <input type="email" name="email" required autocomplete="email" placeholder="example@email.com">
-        </label>
-        <label>Mobile Phone:
-          <input type="tel" name="phone" required autocomplete="tel">
-        </label>
-        <label>Organization Name:
-          <input type="text" name="organization" required autocomplete="organization">
-        </label>
-        <label>Select Membership Level:
-          <select name="membership">
-            <option value="np">Non Profit Membership</option>
-            <option value="bronze">Bronze Membership</option>
-            <option value="silver">Silver Membership</option>
-            <option value="gold">Gold Membership</option>
-          </select>
-        </label>
-        <label>Business Description:
-          <textarea name="description"></textarea>
-        </label>
-        <input type="hidden" id="timestamp" name="timestamp">
-        <label>
-          <input type="submit" value="Submit Application">
-        </label>
-      </form>
-    </div>
+      <div class="form-wrapper">
+        <form method="get" action="thankyou.html">
+          <label>First Name:
+            <input type="text" name="fname" required autocomplete="given-name">
+          </label>
+          <label>Last Name:
+            <input type="text" name="lname" required autocomplete="family-name">
+          </label>
+          <label>Organizational Title:
+            <input type="text" name="orgtitle" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+          </label>
+          <label>Email:
+            <input type="email" name="email" required autocomplete="email" placeholder="example@email.com">
+          </label>
+          <label>Mobile Phone:
+            <input type="tel" name="phone" required autocomplete="tel">
+          </label>
+          <label>Organization Name:
+            <input type="text" name="organization" required autocomplete="organization">
+          </label>
+          <label>Select Membership Level:
+            <select name="membership">
+              <option value="np">Non Profit Membership</option>
+              <option value="bronze">Bronze Membership</option>
+              <option value="silver">Silver Membership</option>
+              <option value="gold">Gold Membership</option>
+            </select>
+          </label>
+          <label>Business Description:
+            <textarea name="description"></textarea>
+          </label>
+          <input type="hidden" id="timestamp" name="timestamp">
+          <label>
+            <input type="submit" value="Submit Application">
+          </label>
+        </form>
+      </div>
 
-    <section class="membership-cards">
-      <div class="card bg-nonprofit">
-        <h3>Non Profit Membership</h3>
-        <a href="#" onclick="openModal('modal-non-profit')">Learn More</a>
-      </div>
-      <div class="card bg-bronze">
-        <h3>Bronze Membership</h3>
-        <a href="#" onclick="openModal('modal-bronze')">Learn More</a>
-      </div>
-      <div class="card bg-silver">
-        <h3>Silver Membership</h3>
-        <a href="#" onclick="openModal('modal-silver')">Learn More</a>
-      </div>
-      <div class="card bg-gold">
-        <h3>Gold Membership</h3>
-        <a href="#" onclick="openModal('modal-gold')">Learn More</a>
-      </div>
-    </section>
+      <section class="membership-cards">
+        <div class="card bg-nonprofit">
+          <h3>Non Profit Membership</h3>
+          <a href="#" onclick="openModal('modal-non-profit')">Learn More</a>
+        </div>
+        <div class="card bg-bronze">
+          <h3>Bronze Membership</h3>
+          <a href="#" onclick="openModal('modal-bronze')">Learn More</a>
+        </div>
+        <div class="card bg-silver">
+          <h3>Silver Membership</h3>
+          <a href="#" onclick="openModal('modal-silver')">Learn More</a>
+        </div>
+        <div class="card bg-gold">
+          <h3>Gold Membership</h3>
+          <a href="#" onclick="openModal('modal-gold')">Learn More</a>
+        </div>
+      </section>
 
-    <div class="modal" id="modal-non-profit">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('modal-non-profit')">&times;</span>
-        <h2>Non Profit Membership Benefits</h2>
-        <p>No fee. Access to basic resources, newsletters, and networking events.</p>
+     
+      <div class="modal" id="modal-non-profit">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal-non-profit')">&times;</span>
+          <h2>Non Profit Membership Benefits</h2>
+          <p>No fee. Access to basic resources, newsletters, and networking events.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="modal" id="modal-bronze">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('modal-bronze')">&times;</span>
-        <h2>Bronze Benefits</h2>
-        <p>Includes event discounts, basic directory listing, and training access.</p>
+      <div class="modal" id="modal-bronze">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal-bronze')">&times;</span>
+          <h2>Bronze Benefits</h2>
+          <p>Includes event discounts, basic directory listing, and training access.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="modal" id="modal-silver">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('modal-silver')">&times;</span>
-        <h2>Silver Benefits</h2>
-        <p>All Bronze benefits, plus spotlight advertising and premium listing.</p>
+      <div class="modal" id="modal-silver">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal-silver')">&times;</span>
+          <h2>Silver Benefits</h2>
+          <p>All Bronze benefits, plus spotlight advertising and premium listing.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="modal" id="modal-gold">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('modal-gold')">&times;</span>
-        <h2>Gold Benefits</h2>
-        <p>All Silver benefits, VIP invites, and personalized promotional support.</p>
+      <div class="modal" id="modal-gold">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal-gold')">&times;</span>
+          <h2>Gold Benefits</h2>
+          <p>All Silver benefits, VIP invites, and personalized promotional support.</p>
+        </div>
       </div>
     </div>
   </main>
@@ -137,16 +140,15 @@
     <p>&copy; <span id="currentyear"></span> Jacob C. Schumann | Provo, UT | WDD 231</p>
     <p class="lastmodified">Last Modified: <span id="lastModified"></span></p>
 
-   <div class="footer-social">
+    <div class="footer-social">
       <a href="#"><img src="images/youtube.webp" alt="YouTube" width="32" height="32"></a>
       <a href="#"><img src="images/twitterx.png" alt="Twitter" width="32" height="32"></a>
       <a href="#"><img src="images/linkedin.png" alt="LinkedIn" width="32" height="32"></a>
     </div>
-
-    
   </footer>
 
   <script src="scripts/join.js"></script>
   <script src="scripts/cards.js"></script>
+  <script src="scripts/theme-toggle.js"></script>
 </body>
 </html>
