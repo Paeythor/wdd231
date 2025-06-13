@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,39 +9,40 @@
   <meta property="og:description" content="Discover events, businesses, and news with the Provo Chamber of Commerce.">
   <meta property="og:url" content="https://paeythor.github.io/wdd231/chamber/index.html">
   <meta property="og:locale" content="en_US">
-  <meta property="og:image" content="https://paeythor.github.io/wdd231/chamber/images/provoimage.jpg">
+  <meta property="og:image" content="https://paeythor.github.io/wdd231/chamber/images/provoimage.jpeg">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Provo Chamber of Commerce">
-  <meta name="twitter:image" content="https://paeythor.github.io/wdd231/chamber/images/provoimage.jpg">
+  <meta name="twitter:image" content="https://paeythor.github.io/wdd231/chamber/images/provoimage.jpeg">
   <link rel="icon" href="images/favicon.ico">
   <link rel="stylesheet" href="styles/index.css">
   <title>Provo Chamber of Commerce - Home</title>
 </head>
 
 <body>
+  <img src="images/chamber_bg.jpg" alt="Chamber Background" class="background-hero">
   <header>
     <div class="top-bar">
       <div class="logo">
-        <img src="images/provo-chamberco2.png" alt="Provo Chamber of Commerce logo">
+        <img src="images/provo-chamberco2.webp" alt="Provo Chamber of Commerce logo">
         <span>Provo<br><small>Chamber of Commerce</small></span>
       </div>
       <nav>
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="directory.html">Directory</a>
         <a href="join.html">Join</a>
         <a href="discover.html">Discover</a>
-        <button id="toggle-theme">🌓</button>
+        <button id="toggle-theme" aria-label="Toggle Theme">🌓</button>
       </nav>
     </div>
 
-   3
-
-      <section class="call-to-action">
-        <h2>Become a Member Today!</h2>
-        <p>Join the Provo Chamber of Commerce to connect with local businesses, attend exclusive events, and grow your network.</p>
-        <a class="cta-button" href="join.html">Join the Chamber</a>
-      </section>
-    </div>
+    <section class="call-to-action">
+      <h2>Become a Member Today!</h2>
+      <p>
+        Join the Provo Chamber of Commerce to connect with local businesses,
+        attend exclusive events, and grow your network.
+      </p>
+      <a class="cta-button" href="join.html">Join the Chamber</a>
+    </section>
   </header>
 
   <main>
@@ -66,7 +66,9 @@
         <div class="event-card">
           <h3>Provo City News</h3>
           <p>Stay informed on the latest news and updates from the City of Provo.</p>
-          <p><a href="https://www.provo.gov/CivicAlerts.aspx?CID=1" target="_blank">View Provo City Alerts</a></p>
+          <p>
+            <a href="https://www.provo.gov/CivicAlerts.aspx?CID=1" target="_blank">View Provo City Alerts</a>
+          </p>
         </div>
       </div>
 
@@ -80,24 +82,50 @@
 
     <section class="spotlights">
       <h2>Member Spotlights</h2>
-      <div id="spotlight-cards" class="spotlight-cards">
-      </div>
+      <div id="spotlight-cards" class="spotlight-cards"></div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="currentyear"></span> Jacob C. Schumann | Provo, UT | WDD 231</p>
-    <p class="lastmodified">Last Modified: <span id="lastModified"></span></p>
-    <div class="footer-social">
-      <a href="#"><img src="images/youtube.webp" alt="YouTube" width="32" height="32"></a>
-      <a href="#"><img src="images/twitterx.png" alt="Twitter" width="32" height="32"></a>
-      <a href="#"><img src="images/linkedin.png" alt="LinkedIn" width="32" height="32"></a>
+    <p>
+      &copy; <span id="currentyear"></span> Jacob C. Schumann | Provo, UT | WDD
+      231
+    </p>
+    <p class="lastmodified">
+      Last Modified: <span id="lastModified"></span>
+    </p>
+
+    <address class="footer-contact">
+      <strong>Provo Chamber of Commerce</strong><br>
+      111 Center Street<br>
+      Provo, UT 84601<br>
+      <a href="mailto:info@provocc.org">info@provocc.org</a><br>
+      (801) 555-2300
+    </address>
+
+    <div class="footer-social" role="list">
+      <a href="#" role="listitem">
+        <img src="images/youtube.webp" alt="YouTube" width="32" height="32">
+      </a>
+      <a href="#" role="listitem">
+        <img src="images/twitterx.webp" alt="Twitter" width="32" height="32">
+      </a>
+      <a href="#" role="listitem">
+        <img src="images/linkedin.webp" alt="LinkedIn" width="32" height="32">
+      </a>
+    </div>
+
+    <div class="footer-info">
+      <p>
+        WDD231 Class Project<br>
+        Jacob Schumann<br>
+        &copy; 2025 Provo Chamber of Commerce<br>
+        Last Modification: 05/23/2025 14:00:00
+      </p>
     </div>
   </footer>
 
-  <script src="scripts/weather.js"></script>
-  <script src="scripts/spotlight.js"></script>
-  <script src="scripts/theme-toggle.js"></script>
+  
+  <script src="scripts/members.js"></script>
 </body>
-
 </html>

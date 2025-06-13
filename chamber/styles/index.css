@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -7,7 +7,7 @@ body {
   color: #333;
 }
 
-/* Header Styles */
+
 .top-bar {
   display: flex;
   justify-content: space-between;
@@ -33,7 +33,7 @@ nav a {
   color: white;
 }
 
-/* Hero Section */
+
 .hero {
   position: relative;
   width: 100%;
@@ -58,13 +58,13 @@ nav a {
   cursor: pointer;
 }
 
-/* Call to Action Overlay on Hero */
+
 .call-to-action {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(0, 51, 102, 0.85); /* semi-transparent background */
+  background-color: rgba(0, 51, 102, 0.85); 
   color: white;
   padding: 30px 20px;
   border-radius: 10px;
@@ -100,7 +100,7 @@ nav a {
   background-color: #ffd166;
 }
 
-/* Main Content */
+
 main {
   padding: 20px;
   color: #333;
@@ -137,7 +137,7 @@ main {
   margin: 5px 0;
 }
 
-/* Business Section */
+
 .business-section {
   display: flex;
   gap: 20px;
@@ -157,11 +157,17 @@ main {
   min-width: 280px;
 }
 
-.business-card img {
+
+.business-card img,
+.business-item img {
   width: 100%;
-  height: auto;
-  margin-bottom: 10px;
+  max-width: 250px;     
+  height: 200px;        
+  object-fit: cover;    
+  margin: 0 auto 10px;  
+  display: block;
 }
+
 
 .business-item {
   flex: 1 1 30%;
@@ -175,7 +181,7 @@ main {
   margin-bottom: 10px;
 }
 
-/* Spotlight Cards */
+
 .spotlight-cards {
   display: flex;
   gap: 20px;
@@ -197,7 +203,7 @@ main {
   margin-bottom: 10px;
 }
 
-/* Footer Styles */
+
 footer {
   background: #003366;
   color: white;
@@ -219,7 +225,7 @@ footer {
   filter: none;
 }
 
-/* Responsive Styles */
+
 @media screen and (max-width: 768px) {
   .info-grid, .business-section, .spotlight-cards, footer {
     flex-direction: column;
@@ -234,7 +240,7 @@ footer {
   }
 }
 
-/* Dark Theme Styles */
+
 body.dark-theme {
   background-color: #121212;
   color: #ffffff;
@@ -282,4 +288,21 @@ body.dark-theme .call-to-action {
 body.dark-theme .call-to-action h2,
 body.dark-theme .call-to-action p {
   color: #ffffff;
+}
+.background-hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.3; 
+  pointer-events: none;
+}
+
+
+body {
+  position: relative;
+  z-index: 1;
 }
