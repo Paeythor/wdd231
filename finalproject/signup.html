@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Jacob C. Schumann">
+  <meta name="description" content="Site plan for The Wheel of Time Books Discussion and Newsletter Fan Site">
+  <title>Site Plan – The Wheel of Time Fan Hub</title>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="final.css">
+</head>
+<body>
+
+  <h1>Site Plan – The Wheel of Time Fan Hub</h1>
+
+  <section>
+    <h2>1. Site Name</h2>
+    <p><strong>The Wheel of Time Fan Hub</strong> – This name clearly communicates the fan-driven nature of the site and connects directly with the title of the book series. It's designed to be easy to remember and reflects both discussion and content-sharing aspects.</p>
+  </section>
+
+  <section>
+    <h2>2. Site Purpose</h2>
+    <p>This site provides a central place for fans of Robert Jordan’s <em>The Wheel of Time</em> to discuss theories, character arcs, and lore. It features a discussion board, character guides, timeline summaries, and a newsletter sign-up for fans to stay updated on discussions and fan-created content.</p>
+  </section>
+
+  <section>
+    <h2>3. Scenarios</h2>
+    <ul>
+      <li>What are some fan theories about Moiraine’s true intentions?</li>
+      <li>Where can I subscribe to receive updates about new discussions or events?</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>4. Color Schema</h2>
+    <p><span class="color-box" style="background-color: #2b3a42;"></span> <strong>Dark Blue (#2b3a42):</strong> Used for headings and header backgrounds to reflect the mysterious tone of the series.</p>
+    <p><span class="color-box" style="background-color: #e07a5f;"></span> <strong>Accent Orange (#e07a5f):</strong> Used for highlights, buttons, and call-to-action elements like the newsletter sign-up.</p>
+  </section>
+
+  <section>
+    <h2>5. Typography</h2>
+    <p><strong>Merriweather</strong> (serif) – Used for headings to give a classic, bookish feel.</p>
+    <p><strong>Open Sans</strong> (sans-serif) – Used for body text for readability across all devices.</p>
+  </section>
+
+  <section class="wireframe">
+    <h2>6. Wireframe</h2>
+    <p><strong>Mobile View:</strong></p>
+    <img src="https://via.placeholder.com/400x600?text=Mobile+Wireframe" alt="Mobile wireframe placeholder">
+    <p><strong>Desktop View:</strong></p>
+    <img src="https://via.placeholder.com/800x600?text=Desktop+Wireframe" alt="Desktop wireframe placeholder">
+    <p>(You can replace the placeholders with your own sketches or diagrams as you create them.)</p>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Jacob C. Schumann | Provo, UT | WDD 231</p>
+    <p class="lastmodified">Last Modified: <span id="lastModified"></span></p>
+
+    <div class="footer-social">
+      <a href="#"><img src="images/youtube.webp" alt="YouTube" width="32" height="32"></a>
+      <a href="#"><img src="images/twitterx.webp" alt="Twitter" width="32" height="32"></a>
+      <a href="#"><img src="images/linkedin.webp" alt="LinkedIn" width="32" height="32"></a>
+    </div>
+  </footer>
+
+ 
+  <script src="final.js"></script>
+</body>
+</html>
+
+
+<main>
+  <h1>Join the Wheel of Time Fan Society</h1>
+
+  <div class="two-column-layout">
+    <div class="form-wrapper">
+      <form method="get" action="thankyou.html">
+        <label>First Name:
+          <input type="text" name="fname" required autocomplete="given-name">
+        </label>
+        <label>Last Name:
+          <input type="text" name="lname" required autocomplete="family-name">
+        </label>
+        <label>Title or Affiliation (e.g., Novice, Warder, Aes Sedai):
+          <input type="text" name="title" autocomplete="organization-title" placeholder="e.g., Novice, Warder">
+        </label>
+        <label>Email:
+          <input type="email" name="email" required autocomplete="email" placeholder="example@email.com">
+        </label>
+        <label>Preferred Contact Number:
+          <input type="tel" name="phone" required autocomplete="tel">
+        </label>
+        <label>Circle or Society Name (optional):
+          <input type="text" name="organization" autocomplete="organization">
+        </label>
+        <label>Choose Your Path:
+          <select name="membership">
+            <option value="novice">Novice (Beginner - General Updates)</option>
+            <option value="accepted">Accepted (Intermediate - Discussion Access)</option>
+            <option value="aes_sedai">Aes Sedai (Advanced - Host Threads)</option>
+            <option value="warder">Warder (Support Role - Defense & Lore Posts)</option>
+            <option value="dedicated">Dedicated (Aspiring Asha'man - Lore Contributor)</option>
+            <option value="full_ashaman">Full Asha'man (Elite - Lorekeeper & Event Moderator)</option>
+          </select>
+        </label>
+        <label>Tell us about your journey through the Pattern:
+          <textarea name="description" placeholder="Share your favorite book, character, or theory."></textarea>
+        </label>
+        <input type="hidden" id="timestamp" name="timestamp">
+        <label>
+          <input type="submit" value="Submit Application">
+        </label>
+      </form>
+    </div>
+
+    <section class="membership-cards">
+      <div class="card bg-novice">
+        <h3>Novice</h3>
+        <a href="#" onclick="openModal('modal-novice')">Learn More</a>
+      </div>
+      <div class="card bg-accepted">
+        <h3>Accepted</h3>
+        <a href="#" onclick="openModal('modal-accepted')">Learn More</a>
+      </div>
+      <div class="card bg-aessedai">
+        <h3>Aes Sedai</h3>
+        <a href="#" onclick="openModal('modal-aessedai')">Learn More</a>
+      </div>
+      <div class="card bg-warder">
+        <h3>Warder</h3>
+        <a href="#" onclick="openModal('modal-warder')">Learn More</a>
+      </div>
+      <div class="card bg-dedicated">
+        <h3>Dedicated</h3>
+        <a href="#" onclick="openModal('modal-dedicated')">Learn More</a>
+      </div>
+      <div class="card bg-ashaman">
+        <h3>Full Asha'man</h3>
+        <a href="#" onclick="openModal('modal-ashaman')">Learn More</a>
+      </div>
+    </section>
+
+    <!-- Modals -->
+    <div class="modal" id="modal-novice">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-novice')">&times;</span>
+        <h2>Novice Membership</h2>
+        <p>Receive general site updates and news. Perfect for newcomers stepping into the Pattern.</p>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-accepted">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-accepted')">&times;</span>
+        <h2>Accepted Membership</h2>
+        <p>Access to discussion threads and monthly themed theory breakdowns.</p>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-aessedai">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-aessedai')">&times;</span>
+        <h2>Aes Sedai Membership</h2>
+        <p>Host your own discussion threads, contribute deep dives into the One Power, Ajahs, and more.</p>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-warder">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-warder')">&times;</span>
+        <h2>Warder Role</h2>
+        <p>Support moderators and help curate lore, defend against off-topic spoilers, and guide others.</p>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-dedicated">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-dedicated')">&times;</span>
+        <h2>Dedicated Membership</h2>
+        <p>Work toward full Asha'man. Share theories, assist in lore tracking, and engage with fellow aspiring channelers.</p>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-ashaman">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-ashaman')">&times;</span>
+        <h2>Full Asha'man</h2>
+        <p>Our highest tier. Lead major discussions, help moderate events, and preserve the Pattern with expert insight.</p>
+      </div>
+    </div>
+  </div>
+</main>
