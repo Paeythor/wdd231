@@ -40,7 +40,7 @@ h1 {
 .header-content {
   text-align: center;
   padding: 60px 20px;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
 }
 
@@ -53,6 +53,7 @@ h1 {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  color: #000;
 }
 
 .hero-button:hover {
@@ -94,8 +95,8 @@ nav .hamburger {
   color: white;
   text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
-  overflow: visible; 
-  background-color: transparent; 
+  overflow: visible;
+  background-color: transparent;
 }
 
 .nav-links a::before {
@@ -103,12 +104,12 @@ nav .hamburger {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 80px;      
+  width: 80px;
   height: 80px;
   background: url('chamber/images/provo.svg') no-repeat center;
   background-size: contain;
   transform: translate(-50%, -50%);
-  z-index: 0; 
+  z-index: 0;
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
@@ -117,7 +118,7 @@ nav .hamburger {
 .nav-links a:hover {
   background-color: #f1f4f6;
   color: #002b7f;
-  z-index: 2; 
+  z-index: 2;
 }
 
 .nav-links a:hover::before {
@@ -199,6 +200,7 @@ select:focus,
 textarea:focus {
   border-color: #4bc6b9;
   box-shadow: inset 6px 0 0 #4bc6b9, 0 0 5px #4bc6b9;
+  outline: 2px solid #4bc6b9;
 }
 
 .form-wrapper {
@@ -240,6 +242,7 @@ textarea:focus {
 
 .bg-bronze {
   background-color: #cd7f32;
+  color: #000;
 }
 
 .bg-silver {
