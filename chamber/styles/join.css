@@ -409,3 +409,37 @@ body.dark-theme .call-to-action h2,
 body.dark-theme .call-to-action p {
   color: #ffffff;
 }
+.breadcrumb {
+  font-size: 0.9rem;
+  margin: 1rem auto;
+  max-width: 960px;
+  padding: 0 1rem;
+}
+
+.breadcrumb ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  color: #444;
+}
+
+.breadcrumb li::after {
+  content: "/";
+  margin-left: 0.5rem;
+  color: #888;
+}
+
+.breadcrumb li:last-child::after {
+  content: "";
+  margin: 0;
+}
+
+.breadcrumb a {
+  color: #002b7f;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
