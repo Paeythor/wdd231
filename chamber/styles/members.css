@@ -415,5 +415,5 @@ nav button:focus {
 }
 .top-bar .logo img {
   width: 150px;
-  height: auto; /* maintain aspect ratio */
+  height: auto; 
 }
