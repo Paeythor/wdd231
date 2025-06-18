@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Directory page for the Provo Chamber of Commerce featuring local business listings.">
   <meta name="author" content="Jacob C. Schumann">
-
   <meta property="og:title" content="Provo Chamber Directory | WDD 231">
   <meta property="og:description" content="Discover and support local businesses in Provo through our Chamber of Commerce directory.">
   <meta property="og:url" content="https://paeythor.github.io/wdd231/chamber/directory.html">
@@ -14,40 +13,40 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Provo Chamber Directory">
   <meta name="twitter:image" content="https://paeythor.github.io/wdd231/chamber/images/og-image.webp">
-
   <link rel="icon" href="images/favicon.ico">
   <link rel="stylesheet" href="styles/members.css">
+  <link rel="stylesheet" href="small.css" media="(max-width: 640px)">
   <title>Provo Chamber Directory | WDD 231</title>
 </head>
 <body>
   <header>
-    <div class="header-content">
-      <img
-        src="images/provo-chamberco2.webp"
-        alt="Provo Chamber of Commerce Logo"
-        class="logo"
-        width="200"
-        height="150"
-     >
+    <div class="top-bar">
+      <div class="logo">
+        <img src="images/provo-chamberco2.webp" alt="Provo Chamber of Commerce logo">
+        <span>Provo<br><small>Chamber of Commerce</small></span>
+      </div>
+  <nav aria-label="Primary navigation">
+  <button
+    class="hamburger"
+    aria-label="Toggle navigation menu"
+    aria-expanded="false"
+    aria-controls="primary-navigation"
+  >
+    &#9776;
+  </button>
+
+  <div class="nav-links" id="primary-navigation">
+    <a href="index.html">Home</a>
+    <a href="directory.html">Directory</a>
+    <a href="join.html">Join</a>
+    <a href="discover.html">Discover</a>
+    <a href="final.html">Final</a>
+    <button id="toggle-theme" aria-pressed="false" aria-label="Toggle dark and light theme">🌓</button>
+  </div>
+</nav>
+
     </div>
   </header>
-
-  <nav>
-    <button
-      class="hamburger"
-      aria-label="Toggle navigation menu"
-      onclick="toggleMenu()"
-    >
-      &#9776;
-    </button>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="directory.html">Directory</a>
-      <a href="join.html">Join</a>
-      <a href="discover.html">Discover</a>
-      <button id="toggle-theme">🌓</button>
-    </div> 
-  </nav> 
 
   <main id="main-content">
     <h1>Provo Chamber Directory | WDD 231</h1>
@@ -58,7 +57,8 @@
         class="toggle-btn active"
         aria-pressed="true"
         aria-label="Grid View"
-      >
+        type="button"
+     >
         <img
           src="images/grid.webp"
           alt="grid"
@@ -73,7 +73,8 @@
         class="toggle-btn"
         aria-pressed="false"
         aria-label="List View"
-      >
+        type="button"
+     >
         <img
           src="images/list.webp"
           alt="list"
@@ -89,7 +90,7 @@
       class="grid-view"
       aria-live="polite"
       aria-label="Business directory"
-    >
+   >
       <img src="images/provo-loco-cocoa.webp" alt="Provo Loco Cocoa logo" width="200" height="150">
       <img src="images/techbro-solutions.webp" alt="TechBro Solutions logo" width="200" height="150">
       <img src="images/y-mountain-bike-rentals.webp" alt="Y Mountain Bike Rentals logo" width="200" height="150">
@@ -108,7 +109,6 @@
   <footer>
     <p>&copy; <span id="currentyear"></span> Jacob C. Schumann | Provo, UT | WDD 231</p>
     <p class="lastmodified">Last Modified: <span id="lastModified"></span></p>
-
     <address class="footer-contact">
       <strong>Provo Chamber of Commerce</strong><br>
       111 Center Street<br>
@@ -116,7 +116,6 @@
       <a href="mailto:info@provocc.org">info@provocc.org</a><br>
       (801) 555-2300
     </address>
-
     <div class="footer-social" role="list">
       <a href="#" role="listitem">
         <img src="images/youtube.webp" alt="YouTube" width="32" height="32">
@@ -128,7 +127,6 @@
         <img src="images/linkedin.webp" alt="LinkedIn" width="32" height="32">
       </a>
     </div>
-
     <div class="footer-info">
       <p>
         WDD231 Class Project<br>

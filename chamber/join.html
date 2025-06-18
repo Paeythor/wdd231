@@ -2,9 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Join Provo Chamber of Commerce</title>
+  
   <meta name="description" content="Directory page for the Provo Chamber of Commerce featuring local business listings.">
   <meta name="author" content="Jacob C. Schumann">
+  
   <meta property="og:title" content="Provo Chamber of Commerce - Join">
   <meta property="og:description" content="Discover events, businesses, and news with the Provo Chamber of Commerce.">
   <meta property="og:url" content="https://paeythor.github.io/wdd231/chamber/join.html">
@@ -12,32 +16,44 @@
   <meta property="og:image" content="https://paeythor.github.io/wdd231/chamber/images/provoimage.webp">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Provo Chamber of Commerce">
+  
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://paeythor.github.io/wdd231/chamber/images/provoimage.webp">
 
   <link rel="icon" href="images/favicon.ico">
   <link rel="stylesheet" href="styles/join.css">
+  <link rel="stylesheet" href="small.css" media="(max-width: 640px)">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <title>Join Provo Chamber of Commerce</title>
 </head>
+
 <body>
 
-  <img src="images/chamber_bg.webp" alt="Chamber Background" class="background-hero">
+  <img src="images/chamber_bg.webp" alt="Provo Chamber of Commerce background" class="background-hero">
 
   <header>
-    <div class="header-content">
-      <img src="images/provo-chamberco2.webp" alt="Provo Chamber of Commerce Logo" class="logo">
-      <button class="hero-button">Keynote Tickets</button>
-    </div>
-  </header>
+  <div class="header-content">
+    <img src="images/provo-chamberco2.webp" alt="Provo Chamber of Commerce Logo" class="logo">
+  </div>
+</header>
 
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-    <div class="nav-links">
+
+  <nav aria-label="Primary navigation">
+    <button
+      class="hamburger"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      aria-controls="primary-navigation"
+    >
+      &#9776;
+    </button>
+
+    <div class="nav-links" id="primary-navigation" hidden>
       <a href="index.html">Home</a>
       <a href="directory.html">Directory</a>
-      <a href="join.html">Join</a>
+      <a href="join.html" aria-current="page">Join</a>
       <a href="discover.html">Discover</a>
-      <button id="toggle-theme">🌓</button>
+      <a href="final.html">Final</a>
+      <button id="toggle-theme" aria-pressed="false" aria-label="Toggle dark and light theme">🌓</button>
     </div>
   </nav>
 
@@ -45,93 +61,108 @@
     <h1>Join Provo Chamber of Commerce</h1>
 
     <div class="two-column-layout">
-      <div class="form-wrapper">
-        <form method="get" action="thankyou.html">
-          <label>First Name:
-            <input type="text" name="fname" required autocomplete="given-name">
+      <section class="form-wrapper" aria-labelledby="formTitle">
+        <h2 id="formTitle" class="sr-only">Membership Application Form</h2>
+        <form method="get" action="thankyou.html" novalidate>
+          <label for="fname">First Name:
+            <input type="text" id="fname" name="fname" required autocomplete="given-name">
           </label>
-          <label>Last Name:
-            <input type="text" name="lname" required autocomplete="family-name">
+
+          <label for="lname">Last Name:
+            <input type="text" id="lname" name="lname" required autocomplete="family-name">
           </label>
-          <label>Organizational Title:
-            <input type="text" name="orgtitle" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+
+          <label for="orgtitle">Organizational Title:
+            <input type="text" id="orgtitle" name="orgtitle" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" title="At least 7 letters, spaces or hyphens.">
           </label>
-          <label>Email:
-            <input type="email" name="email" required autocomplete="email" placeholder="example@email.com">
+
+          <label for="email">Email:
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@email.com">
           </label>
-          <label>Mobile Phone:
-            <input type="tel" name="phone" required autocomplete="tel">
+
+          <label for="phone">Mobile Phone:
+            <input type="tel" id="phone" name="phone" required autocomplete="tel">
           </label>
-          <label>Organization Name:
-            <input type="text" name="organization" required autocomplete="organization">
+
+          <label for="organization">Organization Name:
+            <input type="text" id="organization" name="organization" required autocomplete="organization">
           </label>
-          <label>Select Membership Level:
-            <select name="membership">
+
+          <label for="membership">Select Membership Level:
+            <select id="membership" name="membership" required>
+              <option value="" disabled selected>Select one</option>
               <option value="np">Non Profit Membership</option>
               <option value="bronze">Bronze Membership</option>
               <option value="silver">Silver Membership</option>
               <option value="gold">Gold Membership</option>
             </select>
           </label>
-          <label>Business Description:
-            <textarea name="description"></textarea>
-          </label>
-          <input type="hidden" id="timestamp" name="timestamp">
-          <label>
-            <input type="submit" value="Submit Application">
-          </label>
-        </form>
-      </div>
 
-      <section class="membership-cards">
-        <div class="card bg-nonprofit">
-          <h3>Non Profit Membership</h3>
-          <a href="#" onclick="openModal('modal-non-profit')">Learn More</a>
-        </div>
-        <div class="card bg-bronze">
-          <h3>Bronze Membership</h3>
-          <a href="#" onclick="openModal('modal-bronze')">Learn More</a>
-        </div>
-        <div class="card bg-silver">
-          <h3>Silver Membership</h3>
-          <a href="#" onclick="openModal('modal-silver')">Learn More</a>
-        </div>
-        <div class="card bg-gold">
-          <h3>Gold Membership</h3>
-          <a href="#" onclick="openModal('modal-gold')">Learn More</a>
-        </div>
+          <label for="description">Business Description:
+            <textarea id="description" name="description" rows="5" placeholder="Tell us about your business..."></textarea>
+          </label>
+
+          <input type="hidden" id="timestamp" name="timestamp">
+
+          <button type="submit">Submit Application</button>
+        </form>
       </section>
 
-      <!-- Modals -->
-      <div class="modal" id="modal-non-profit">
+      <section class="membership-cards" aria-label="Membership Levels and Benefits">
+        <article class="card bg-nonprofit" tabindex="0" role="button" aria-describedby="desc-non-profit" onclick="openModal('modal-non-profit')" onkeypress="if(event.key==='Enter'){openModal('modal-non-profit')}">
+          <h3>Non Profit Membership</h3>
+          <a href="#" aria-describedby="desc-non-profit" aria-label="Learn more about Non Profit Membership benefits" tabindex="-1">Learn More</a>
+          <p id="desc-non-profit" class="sr-only">No fee. Access to basic resources, newsletters, and networking events.</p>
+        </article>
+
+        <article class="card bg-bronze" tabindex="0" role="button" aria-describedby="desc-bronze" onclick="openModal('modal-bronze')" onkeypress="if(event.key==='Enter'){openModal('modal-bronze')}">
+          <h3>Bronze Membership</h3>
+          <a href="#" aria-describedby="desc-bronze" aria-label="Learn more about Bronze Membership benefits" tabindex="-1">Learn More</a>
+          <p id="desc-bronze" class="sr-only">Includes event discounts, basic directory listing, and training access.</p>
+        </article>
+
+        <article class="card bg-silver" tabindex="0" role="button" aria-describedby="desc-silver" onclick="openModal('modal-silver')" onkeypress="if(event.key==='Enter'){openModal('modal-silver')}">
+          <h3>Silver Membership</h3>
+          <a href="#" aria-describedby="desc-silver" aria-label="Learn more about Silver Membership benefits" tabindex="-1">Learn More</a>
+          <p id="desc-silver" class="sr-only">All Bronze benefits, plus spotlight advertising and premium listing.</p>
+        </article>
+
+        <article class="card bg-gold" tabindex="0" role="button" aria-describedby="desc-gold" onclick="openModal('modal-gold')" onkeypress="if(event.key==='Enter'){openModal('modal-gold')}">
+          <h3>Gold Membership</h3>
+          <a href="#" aria-describedby="desc-gold" aria-label="Learn more about Gold Membership benefits" tabindex="-1">Learn More</a>
+          <p id="desc-gold" class="sr-only">All Silver benefits, VIP invites, and personalized promotional support.</p>
+        </article>
+      </section>
+
+      <div class="modal" id="modal-non-profit" role="dialog" aria-modal="true" aria-labelledby="modal-non-profit-title" aria-describedby="modal-non-profit-desc" hidden>
         <div class="modal-content">
-          <span class="close" onclick="closeModal('modal-non-profit')">&times;</span>
-          <h2>Non Profit Membership Benefits</h2>
-          <p>No fee. Access to basic resources, newsletters, and networking events.</p>
+          <button class="close" aria-label="Close modal" onclick="closeModal('modal-non-profit')">&times;</button>
+          <h2 id="modal-non-profit-title">Non Profit Membership Benefits</h2>
+          <p id="modal-non-profit-desc">No fee. Access to basic resources, newsletters, and networking events.</p>
         </div>
       </div>
 
-      <div class="modal" id="modal-bronze">
+      <div class="modal" id="modal-bronze" role="dialog" aria-modal="true" aria-labelledby="modal-bronze-title" aria-describedby="modal-bronze-desc" hidden>
         <div class="modal-content">
-          <span class="close" onclick="closeModal('modal-bronze')">&times;</span>
-          <h2>Bronze Benefits</h2>
-          <p>Includes event discounts, basic directory listing, and training access.</p>
+          <button class="close" aria-label="Close modal" onclick="closeModal('modal-bronze')">&times;</button>
+          <h2 id="modal-bronze-title">Bronze Benefits</h2>
+          <p id="modal-bronze-desc">Includes event discounts, basic directory listing, and training access.</p>
         </div>
       </div>
 
-      <div class="modal" id="modal-silver">
+      <div class="modal" id="modal-silver" role="dialog" aria-modal="true" aria-labelledby="modal-silver-title" aria-describedby="modal-silver-desc" hidden>
         <div class="modal-content">
-          <span class="close" onclick="closeModal('modal-silver')">&times;</span>
-          <h2>Silver Benefits</h2>
-          <p>All Bronze benefits, plus spotlight advertising and premium listing.</p>
+          <button class="close" aria-label="Close modal" onclick="closeModal('modal-silver')">&times;</button>
+          <h2 id="modal-silver-title">Silver Benefits</h2>
+          <p id="modal-silver-desc">All Bronze benefits, plus spotlight advertising and premium listing.</p>
         </div>
       </div>
 
-      <div class="modal" id="modal-gold">
+      <div class="modal" id="modal-gold" role="dialog" aria-modal="true" aria-labelledby="modal-gold-title" aria-describedby="modal-gold-desc" hidden>
         <div class="modal-content">
-          <span class="close" onclick="closeModal('modal-gold')">&times;</span>
-          <h2>Gold Benefits</h2>
-          <p>All Silver benefits, VIP invites, and personalized promotional support.</p>
+          <button class="close" aria-label="Close modal" onclick="closeModal('modal-gold')">&times;</button>
+          <h2 id="modal-gold-title">Gold Benefits</h2>
+          <p id="modal-gold-desc">All Silver benefits, VIP invites, and personalized promotional support.</p>
         </div>
       </div>
     </div>
@@ -139,12 +170,12 @@
 
   <footer>
     <p>&copy; <span id="currentyear"></span> Jacob C. Schumann | Provo, UT | WDD 231</p>
-    <p class="lastmodified">Last Modified: <span id="lastModified"></span></p>
+    <p class="lastmodified">Last Modified: <time id="lastModified" datetime=""></time></p>
 
-    <div class="footer-social">
-      <a href="#"><img src="images/youtube.webp" alt="YouTube" width="32" height="32"></a>
-      <a href="#"><img src="images/twitterx.webp" alt="Twitter" width="32" height="32"></a>
-      <a href="#"><img src="images/linkedin.webp" alt="LinkedIn" width="32" height="32"></a>
+    <div class="footer-social" role="contentinfo">
+      <a href="#" aria-label="YouTube"><img src="images/youtube.webp" alt="YouTube" width="32" height="32"></a>
+      <a href="#" aria-label="Twitter"><img src="images/twitterx.webp" alt="Twitter" width="32" height="32"></a>
+      <a href="#" aria-label="LinkedIn"><img src="images/linkedin.webp" alt="LinkedIn" width="32" height="32"></a>
     </div>
   </footer>
 

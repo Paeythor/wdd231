@@ -12,7 +12,7 @@
   color: #ffcc00;
   padding: 8px 16px;
   z-index: 100;
-  transition: top 0.3s;
+  transition: top 0.3s ease;
   text-decoration: none;
   font-weight: 600;
   border-radius: 0 0 6px 6px;
@@ -50,14 +50,14 @@ header {
 .logo {
   height: 60px;
   width: auto;
-  filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.4));
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.4));
 }
 
 h1 {
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 1.5px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 nav {
@@ -68,15 +68,16 @@ nav {
   padding: 0 1.5rem;
   position: relative;
   width: 100%;
-  box-shadow: inset 0 -3px 5px rgba(0,0,0,0.2);
+  box-shadow: inset 0 -3px 5px rgba(0, 0, 0, 0.2);
   user-select: none;
+  gap: 1.5rem; 
 }
 
 nav .hamburger {
   display: none;
   width: 40px;
   height: 40px;
-  background-image: url('../images/provo-ut.webp');
+  background-image: url('chamber/images/provo.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -90,27 +91,32 @@ nav .hamburger:hover {
 
 .nav-links {
   display: flex;
-  gap: 1.25rem;
+  gap: 1.5rem; 
   justify-content: center;
   width: 100%;
 }
 
 .nav-links a {
-  padding: 1rem 1.5rem;
-  color: white;
+  padding: 0.8rem 1.2rem; 
+  color: #ffcc00; 
   text-decoration: none;
   position: relative;
   z-index: 1;
   transition: background-color 0.3s ease, color 0.3s ease;
   font-weight: 600;
-  border-radius: 6px;
+  border-radius: 8px; 
+  background-color: transparent;
+  overflow: visible;
 }
 
 .nav-links a.active,
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a:focus {
   background-color: #f1f4f6;
   color: #002b7f;
-  box-shadow: 0 4px 6px rgba(0,43,127,0.3);
+  box-shadow: 0 4px 8px rgba(0, 43, 127, 0.3);
+  outline: none;
+  z-index: 2;
 }
 
 .nav-links a:hover::before {
@@ -127,6 +133,39 @@ nav .hamburger:hover {
   pointer-events: none;
   opacity: 0.15;
   border-radius: 50%;
+  transition: opacity 0.3s ease;
+}
+
+
+nav button.theme-toggle {
+  background-color: #8b0000;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  padding: 0.5rem;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+
+nav button.theme-toggle:hover,
+nav button.theme-toggle:focus {
+  background-color: #a40000;
+  border-color: #ffcc00;
+  box-shadow: 0 4px 10px rgba(255, 204, 0, 0.6);
+  outline: none;
+}
+
+nav button.theme-toggle.active {
+  background-color: #ffcc00;
+  border-color: #8b0000;
+  color: #8b0000;
+  box-shadow: 0 0 8px 2px rgba(255, 204, 0, 0.8);
 }
 
 @media (max-width: 768px) {
@@ -158,6 +197,7 @@ nav .hamburger:hover {
     padding: 1rem 0;
     width: 100%;
     font-size: 1.1rem;
+    border-radius: 0;
   }
 }
 
@@ -176,7 +216,7 @@ h2 {
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 1.2px;
-  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .view-toggle {
@@ -198,19 +238,19 @@ h2 {
   justify-content: center;
   cursor: pointer;
   transition: background-color 0.25s, border-color 0.25s, box-shadow 0.25s;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .toggle-btn:hover {
   background-color: #a40000;
   border-color: #ffcc00;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .toggle-btn.active {
   background-color: #ffcc00;
   border-color: #8b0000;
-  box-shadow: 0 0 8px 2px rgba(255,204,0,0.6);
+  box-shadow: 0 0 8px 2px rgba(255, 204, 0, 0.6);
 }
 
 .icon {
@@ -348,10 +388,32 @@ footer {
   height: 32px;
   margin: 0 0.5rem;
   object-fit: contain;
-  filter: drop-shadow(0 0 1px rgba(0,0,0,0.2));
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.2));
   transition: filter 0.3s ease;
 }
 
 .footer-social img:hover {
   filter: drop-shadow(0 0 5px #ffcc00);
+}
+
+nav button.theme-toggle,
+nav button {
+  background: transparent;
+  border: none;
+  color: #ffcc00;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+nav button.theme-toggle:hover,
+nav button.theme-toggle:focus,
+nav button:hover,
+nav button:focus {
+  background-color: #0040d9;
+  outline: none;
+  box-shadow: 0 6px 15px rgba(0, 43, 127, 0.6);
+}
+.top-bar .logo img {
+  width: 150px;
+  height: auto; /* maintain aspect ratio */
 }
