@@ -19,19 +19,23 @@
 </head>
 
 <body>
-  <img src="images/chamber_bg.jpg" alt="Chamber Background" class="background-hero">
+  <img src="images/chamber_bg.webp" alt="Chamber Background" class="background-hero">
   <header>
     <div class="top-bar">
       <div class="logo">
         <img src="images/provo-chamberco2.webp" alt="Provo Chamber of Commerce logo">
         <span>Provo<br><small>Chamber of Commerce</small></span>
       </div>
-      <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="directory.html">Directory</a>
-        <a href="join.html">Join</a>
-        <a href="discover.html">Discover</a>
-        <button id="toggle-theme" aria-label="Toggle Theme">🌓</button>
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="join.html">Join</a>
+      <a href="discover.html">Discover</a>
+      <button id="toggle-theme">🌓</button>
+    </div>
+  </nav>
       </nav>
     </div>
 
