@@ -18,15 +18,8 @@
   <link rel="icon" href="images/favicon.ico">
   <link rel="stylesheet" href="styles/members.css">
   <title>Provo Chamber Directory | WDD 231</title>
-  <style>
-    #directory.list-view img {
-      display: none;
-    }
-  </style>
 </head>
 <body>
-   <img src="images/chamber_bg.webp" alt="Chamber Background" class="background-hero">
-
   <header>
     <div class="header-content">
       <img
@@ -44,31 +37,28 @@
       class="hamburger"
       aria-label="Toggle navigation menu"
       onclick="toggleMenu()"
-   >
+    >
       &#9776;
     </button>
     <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="directory.html" aria-current="page">Directory</a>
+      <a href="directory.html">Directory</a>
       <a href="join.html">Join</a>
-      <a href="#">Discover</a>
-    </div>
-  </nav>
+      <a href="discover.html">Discover</a>
+      <button id="toggle-theme">🌓</button>
+    </div> 
+  </nav> 
 
   <main id="main-content">
     <h1>Provo Chamber Directory | WDD 231</h1>
     <h2>Business Directory</h2>
-    <div
-      class="view-toggle"
-      role="group"
-      aria-label="Toggle directory view"
-   >
+    <div class="view-toggle" role="group" aria-label="Toggle directory view">
       <button
         id="toggle-grid"
         class="toggle-btn active"
         aria-pressed="true"
         aria-label="Grid View"
-     >
+      >
         <img
           src="images/grid.webp"
           alt="grid"
@@ -83,9 +73,9 @@
         class="toggle-btn"
         aria-pressed="false"
         aria-label="List View"
-     >
+      >
         <img
-          src="images/list.jpeg"
+          src="images/list.webp"
           alt="list"
           class="icon"
           aria-hidden="true"
@@ -99,7 +89,7 @@
       class="grid-view"
       aria-live="polite"
       aria-label="Business directory"
-   >
+    >
       <img src="images/provo-loco-cocoa.webp" alt="Provo Loco Cocoa logo" width="200" height="150">
       <img src="images/techbro-solutions.webp" alt="TechBro Solutions logo" width="200" height="150">
       <img src="images/y-mountain-bike-rentals.webp" alt="Y Mountain Bike Rentals logo" width="200" height="150">
@@ -116,13 +106,8 @@
   </main>
 
   <footer>
-    <p>
-      &copy; <span id="currentyear"></span> Jacob C. Schumann | Provo, UT | WDD
-      231
-    </p>
-    <p class="lastmodified">
-      Last Modified: <span id="lastModified"></span>
-    </p>
+    <p>&copy; <span id="currentyear"></span> Jacob C. Schumann | Provo, UT | WDD 231</p>
+    <p class="lastmodified">Last Modified: <span id="lastModified"></span></p>
 
     <address class="footer-contact">
       <strong>Provo Chamber of Commerce</strong><br>
@@ -154,7 +139,7 @@
     </div>
   </footer>
 
-  
   <script src="scripts/members.js"></script>
+  <script src="scripts/theme-toggle.js"></script>
 </body>
 </html>

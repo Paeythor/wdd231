@@ -27,7 +27,7 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background-image: url('../images/chamberfinder_bg.jpg');
+  background-image: url('../images/chamber_bg.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -76,7 +76,7 @@ nav .hamburger {
   display: none;
   width: 40px;
   height: 40px;
-  background-image: url('chamber/images/provo-ut.jpeg');
+  background-image: url('../images/provo-ut.webp');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -120,7 +120,7 @@ nav .hamburger:hover {
   left: 50%;
   width: 110px;
   height: 110px;
-  background: url('chamber/images/provo-ut.jpeg') no-repeat center;
+  background: url('../images/provo-ut.webp') no-repeat center;
   background-size: contain;
   transform: translate(-50%, -50%);
   z-index: -1;
@@ -187,8 +187,8 @@ h2 {
 }
 
 .toggle-btn {
-  background-color: #f0f0f0;
-  border: 2px solid #ccc;
+  background-color: #8b0000;
+  border: 2px solid #fff;
   border-radius: 12px;
   padding: 0.6rem;
   width: 48px;
@@ -198,25 +198,25 @@ h2 {
   justify-content: center;
   cursor: pointer;
   transition: background-color 0.25s, border-color 0.25s, box-shadow 0.25s;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .toggle-btn:hover {
-  background-color: #e0e0e0;
-  border-color: #999;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  background-color: #a40000;
+  border-color: #ffcc00;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 .toggle-btn.active {
-  background-color: #d0eaff;
-  border-color: #007acc;
-  box-shadow: 0 0 8px 2px #007accaa;
+  background-color: #ffcc00;
+  border-color: #8b0000;
+  box-shadow: 0 0 8px 2px rgba(255,204,0,0.6);
 }
 
 .icon {
   width: 24px;
   height: 24px;
-  fill: #007acc;
+  fill: #fff;
 }
 
 #directory.grid-view {
@@ -238,14 +238,14 @@ h2 {
   padding: 1.25rem;
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   margin-bottom: 1.25rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .member-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .member-card img {
@@ -255,14 +255,14 @@ h2 {
   border-radius: 10px;
   margin-bottom: 1rem;
   object-fit: contain;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
 }
 
 .member-card h3 {
   margin: 0.5rem 0;
   font-weight: 700;
   color: #002b7f;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .member-card a {
@@ -355,15 +355,3 @@ footer {
 .footer-social img:hover {
   filter: drop-shadow(0 0 5px #ffcc00);
 }
-.background-hero {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
-  opacity: 0.25;
-  pointer-events: none;
-}
-
