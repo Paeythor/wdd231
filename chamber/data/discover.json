@@ -1,6 +1,5 @@
+export const items = [
 {
-  "items": [
-    {
       "name": "Bridal Veil Falls",
       "address": "Provo Canyon, UT 84604",
       "description": "A stunning 607-foot waterfall offering scenic views and hiking opportunities.",
@@ -60,5 +59,4 @@
       "description": "A popular hiking trail offering stunning views of the canyon and surrounding areas.",
       "image": "images/rock-canyon-trail.webp"
     }
-  ]
-}
+];

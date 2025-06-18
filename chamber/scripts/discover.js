@@ -1,18 +1,7 @@
+import { items } from '../data/discover-data.js';
+
 const cardsContainer = document.getElementById("discover-cards");
 const messageEl = document.querySelector(".last-visit-message");
-
-async function loadDiscoverData() {
-  try {
-    const response = await fetch("data/discover.json");
-    if (!response.ok) throw new Error("Failed to load data");
-
-    const data = await response.json();
-    displayCards(data.items); 
-  } catch (error) {
-    cardsContainer.innerHTML = `<p>Error loading data.</p>`;
-    console.error("Data fetch error:", error);
-  }
-}
 
 function displayCards(items) {
   cardsContainer.innerHTML = "";
@@ -58,6 +47,6 @@ function showLastVisitMessage() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  loadDiscoverData();
+  displayCards(items);
   showLastVisitMessage();
 });
