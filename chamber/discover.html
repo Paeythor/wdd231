@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,6 +21,7 @@
 
 <body>
   <img src="images/chamber_7.webp" alt="Chamber Background" class="background-hero">
+
   <header>
     <div class="top-bar">
       <div class="logo">
@@ -39,25 +39,15 @@
   </header>
 
   <main class="discover-grid">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li aria-current="page">Discover</li>
+      </ul>
+    </nav>
+
     <h1>Discover Provo</h1>
     <section class="last-visit-message" aria-live="polite"></section>
-
-    <section id="wayfinding" aria-label="Wayfinding information">
-      <h2>Wayfinding</h2>
-      <nav aria-label="Discover locations">
-        <ul>
-          <li><a href="#bridal-veil-falls">Bridal Veil Falls</a></li>
-          <li><a href="#provo-city-library-at-academy-square">Provo City Library at Academy Square</a></li>
-          <li><a href="#provo-pioneer-village">Provo Pioneer Village</a></li>
-          <li><a href="#the-shops-at-riverwoods">The Shops at Riverwoods</a></li>
-          <li><a href="#provo-city-center-temple">Provo City Center Temple</a></li>
-          <li><a href="#crandall-historical-printing-museum">Crandall Historical Printing Museum</a></li>
-          <li><a href="#seven-peaks-water-park">Seven Peaks Water Park</a></li>
-          <li><a href="#provo-river-parkway-trail">Provo River Parkway Trail</a></li>
-        </ul>
-      </nav>
-    </section>
-
     <section class="discover-cards" id="discover-cards" aria-label="Discover items of interest"></section>
   </main>
 
@@ -71,9 +61,7 @@
     </div>
   </footer>
 
-  <script src="scripts/discover.js"></script>
+  <script src="scripts/discover.js" type="module"></script>
   <script src="scripts/theme-toggle.js"></script>
 </body>
-
 </html>
-

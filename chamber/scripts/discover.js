@@ -6,7 +6,7 @@ const messageEl = document.querySelector(".last-visit-message");
 function displayCards(items) {
   cardsContainer.innerHTML = "";
 
-  items.forEach((item) => {
+  items.forEach(item => {
     const card = document.createElement("article");
     card.classList.add("card");
 
