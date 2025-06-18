@@ -1,16 +1,16 @@
-import { items } from '../data/discover-data.js';
+import { items } from '../scripts/discover-data.js';
 
 const cardsContainer = document.getElementById("discover-cards");
 const messageEl = document.querySelector(".last-visit-message");
 
 function displayCards(items) {
   try {
-    // Clear the container's content
+    
     while (cardsContainer.firstChild) {
       cardsContainer.removeChild(cardsContainer.firstChild);
     }
 
-    // Create and append cards
+    
     items.forEach(item => {
       const card = document.createElement("article");
       card.classList.add("card");
@@ -24,9 +24,9 @@ function displayCards(items) {
         <button aria-label="Learn more about ${item.name}">Learn More</button>
       `;
 
-      // Add event listener for button click
+      
       card.querySelector('button').addEventListener('click', () => {
-        // TO DO: Implement button click functionality
+        
         console.log(`Button clicked for ${item.name}`);
       });
 
