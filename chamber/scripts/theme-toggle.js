@@ -7,11 +7,5 @@ if (localStorage.getItem('theme') === 'dark') {
 
 toggleBtn.addEventListener('click', () => {
   document.body.classList.toggle('dark-theme');
-
-  
-  if (document.body.classList.contains('dark-theme')) {
-    localStorage.setItem('theme', 'dark');
-  } else {
-    localStorage.setItem('theme', 'light');
-  }
+  localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light');
 });

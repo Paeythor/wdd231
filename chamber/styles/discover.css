@@ -24,7 +24,8 @@ body {
   pointer-events: none;
 }
 
-header {
+header,
+footer {
   background-color: #002b7f;
   color: #ffcc00;
   padding: 1rem 2rem;
@@ -205,6 +206,37 @@ footer {
   vertical-align: middle;
 }
 
+.breadcrumb {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.breadcrumb ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.breadcrumb li::after {
+  content: ">";
+  margin-left: 0.5rem;
+}
+
+.breadcrumb li:last-child::after {
+  content: "";
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #005a9c;
+}
+
+.breadcrumb li[aria-current="page"] {
+  font-weight: bold;
+}
+
+/* Responsive */
 @media (max-width: 640px) {
   .discover-cards {
     grid-template-columns: 1fr;
@@ -233,6 +265,7 @@ footer {
   }
 }
 
+/* Dark Theme */
 body.dark-theme {
   background-color: #121212;
   color: #ffffff;
@@ -272,33 +305,14 @@ body.dark-theme .card button:hover {
   background-color: #ffd166;
 }
 
-
-.breadcrumb {
-  margin: 1rem 0;
-  font-size: 0.9rem;
+body.dark-theme .discover-cards figure img {
+  filter: brightness(80%) contrast(120%);
 }
 
-.breadcrumb ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 0.5rem;
+body.dark-theme .discover-cards p {
+  color: #ccc;
 }
 
-.breadcrumb li::after {
-  content: ">";
-  margin-left: 0.5rem;
-}
-
-.breadcrumb li:last-child::after {
-  content: "";
-}
-
-.breadcrumb a {
-  text-decoration: none;
-  color: #005a9c;
-}
-
-.breadcrumb li[aria-current="page"] {
-  font-weight: bold;
+body.dark-theme .discover-cards address {
+  color: #666;
 }
