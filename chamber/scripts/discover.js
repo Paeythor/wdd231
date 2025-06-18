@@ -7,7 +7,7 @@ async function loadDiscoverData() {
     if (!response.ok) throw new Error("Failed to load data");
 
     const data = await response.json();
-    displayCards(data.items); // ✅ FIX: access the "items" array
+    displayCards(data.items); 
   } catch (error) {
     cardsContainer.innerHTML = `<p>Error loading data.</p>`;
     console.error("Data fetch error:", error);
