@@ -98,10 +98,11 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
 
-  const modal = document.getElementById('bookModal');
-  const modalTitle = document.getElementById('modalTitle');
-  const modalDesc = document.getElementById('modalDesc');
+  const modal = document.getElementById('bookModal');       
+  const modalTitle = document.getElementById('modalTitle'); 
+  const modalDesc = document.getElementById('modalDesc'); 
   const modalCloseBtn = document.getElementById('modalCloseBtn');
+
 
   document.querySelectorAll('.book-gallery .card img').forEach(img => {
     img.style.cursor = 'pointer';
