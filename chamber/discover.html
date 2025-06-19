@@ -20,38 +20,41 @@
 </head>
 
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <img src="images/chamber_bg.webp" alt="Chamber Background" class="background-hero">
 
   <header>
     <div class="top-bar">
       <div class="logo">
-        <img src="images/provo-chamberco2.webp" alt="Provo Chamber of Commerce logo">
+        <img src="images/provo-chamberco2.webp" class="logo" alt="Provo Chamber of Commerce logo">
         <span>Provo<br><small>Chamber of Commerce</small></span>
       </div>
-  <nav aria-label="Primary navigation">
-  <button
-    class="hamburger"
-    aria-label="Toggle navigation menu"
-    aria-expanded="false"
-    aria-controls="primary-navigation"
-  >
-    &#9776;
-  </button>
+      <nav aria-label="Primary navigation">
+        <button
+          class="hamburger"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          &#9776;
+        </button>
 
-  <div class="nav-links" id="primary-navigation">
-    <a href="index.html">Home</a>
-    <a href="directory.html">Directory</a>
-    <a href="join.html">Join</a>
-    <a href="discover.html">Discover</a>
-    <a href="final.html">Final</a>
-    <button id="toggle-theme" aria-pressed="false" aria-label="Toggle dark and light theme">🌓</button>
-  </div>
-</nav>
+        <div class="nav-links" id="primary-navigation">
+          <a href="index.html">Home</a>
+          <a href="directory.html">Directory</a>
+          <a href="join.html">Join</a>
+          <a href="discover.html">Discover</a>
+          <a href="final.html">Final</a>
+          <button id="toggle-theme" class="theme-toggle" aria-pressed="false" aria-label="Toggle dark and light theme">🌓</button>
 
+
+        </div>
+      </nav>
     </div>
   </header>
 
-  <main class="discover-grid">
+  <main id="main-content" class="discover-grid">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -77,4 +80,5 @@
   <script src="scripts/discover.js" type="module"></script>
   <script src="scripts/theme-toggle.js"></script>
 </body>
+
 </html>

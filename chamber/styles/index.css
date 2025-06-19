@@ -419,3 +419,22 @@ footer .social-icons img:hover {
     margin: 2rem auto;
   }
 }
+#toggle-theme {
+  background: transparent;
+  border: none;
+  color: #ffcc00;
+  cursor: pointer;
+  font-size: 1.2rem;
+  width: 44px;
+  height: 44px;
+  padding: 0.5rem;
+  box-shadow: none;
+  transition: background-color 0.25s ease;
+}
+
+#toggle-theme:hover,
+#toggle-theme:focus {
+  background-color: #0040d9;
+  outline: none;
+  box-shadow: 0 6px 15px rgba(0, 43, 127, 0.6);
+}

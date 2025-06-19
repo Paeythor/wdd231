@@ -24,7 +24,16 @@ body {
   pointer-events: none;
 }
 
-header,
+header {
+  background-color: #002b7f;
+  color: #ffcc00;
+  padding: 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
 footer {
   background-color: #002b7f;
   color: #ffcc00;
@@ -70,7 +79,7 @@ nav .hamburger {
   display: none;
   width: 40px;
   height: 40px;
-  background-image: url('chamber/images/provo.svg');
+  background-image: url('chamber/images/provo.webp');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -85,8 +94,8 @@ nav .hamburger:hover {
 .nav-links {
   display: flex;
   gap: 1.5rem;
-  justify-content: center;
-  width: 100%;
+  justify-content: flex-start;
+  width: auto;
 }
 
 .nav-links a {
@@ -100,6 +109,7 @@ nav .hamburger:hover {
   border-radius: 8px;
   background-color: transparent;
   overflow: visible;
+  display: inline-block;
 }
 
 .nav-links a.active,
@@ -119,7 +129,7 @@ nav .hamburger:hover {
   left: 50%;
   width: 110px;
   height: 110px;
-  background: url('../images/provo-ut.webp') no-repeat center;
+  background: url('images/provo-ut.webp') no-repeat center;
   background-size: contain;
   transform: translate(-50%, -50%);
   z-index: -1;
@@ -130,27 +140,26 @@ nav .hamburger:hover {
 }
 
 nav button.theme-toggle {
-  background-color: #8b0000;
-  border: 2px solid #fff;
-  border-radius: 12px;
-  padding: 0.5rem;
-  width: 44px;
-  height: 44px;
+  background: transparent;
+  border: none;
+  color: #ffcc00;
+  font-size: 1.2rem;
   cursor: pointer;
-  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+  width: 44px;
+  height: 44px;
+  box-shadow: none;
   transition: background-color 0.25s, border-color 0.25s, box-shadow 0.25s;
 }
 
 nav button.theme-toggle:hover,
 nav button.theme-toggle:focus {
-  background-color: #a40000;
-  border-color: #ffcc00;
-  box-shadow: 0 4px 10px rgba(255, 204, 0, 0.6);
+  background-color: #0040d9;
   outline: none;
+  box-shadow: 0 6px 15px rgba(0, 43, 127, 0.6);
 }
 
 nav button.theme-toggle.active {
@@ -190,6 +199,7 @@ nav button.theme-toggle.active {
     width: 100%;
     font-size: 1.1rem;
     border-radius: 0;
+    display: block;
   }
 }
 

@@ -27,35 +27,39 @@
 </head>
 
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <img src="images/chamber_bg.webp" alt="Provo Chamber of Commerce background" class="background-hero">
+  <img src="images/chamber_bg.webp" alt="Chamber Background" class="background-hero">
 
   <header>
-  <div class="header-content">
-    <img src="images/provo-chamberco2.webp" alt="Provo Chamber of Commerce Logo" class="logo">
-  </div>
-</header>
+    <div class="top-bar">
+      <div class="logo">
+        <img src="images/provo-chamberco2.webp" class="logo" alt="Provo Chamber of Commerce logo"> 
+        <span>Provo<br><small>Chamber of Commerce</small></span>
+      </div>
+      <nav aria-label="Primary navigation">
+        <button
+          class="hamburger"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          &#9776;
+        </button>
+
+        <div class="nav-links" id="primary-navigation">
+          <a href="index.html">Home</a>
+          <a href="directory.html">Directory</a>
+          <a href="join.html">Join</a>
+          <a href="discover.html">Discover</a>
+          <a href="final.html">Final</a>
+          <button id="toggle-theme" class="theme-toggle" aria-pressed="false" aria-label="Toggle dark and light theme">🌓</button>
 
 
-  <nav aria-label="Primary navigation">
-    <button
-      class="hamburger"
-      aria-label="Toggle navigation menu"
-      aria-expanded="false"
-      aria-controls="primary-navigation"
-    >
-      &#9776;
-    </button>
-
-    <div class="nav-links" id="primary-navigation" hidden>
-      <a href="index.html">Home</a>
-      <a href="directory.html">Directory</a>
-      <a href="join.html" aria-current="page">Join</a>
-      <a href="discover.html">Discover</a>
-      <a href="final.html">Final</a>
-      <button id="toggle-theme" aria-pressed="false" aria-label="Toggle dark and light theme">🌓</button>
+        </div>
+      </nav>
     </div>
-  </nav>
+  </header>
 
   <main>
     <h1>Join Provo Chamber of Commerce</h1>
