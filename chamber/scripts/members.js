@@ -178,6 +178,14 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchMembers();
   });
 
+  
+  const hamburger = document.querySelector('.hamburger');
+  hamburger.addEventListener('click', () => {
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', !expanded);
+    document.querySelector(".nav-links").classList.toggle("active");
+  });
+
   document.getElementById('currentyear').textContent = new Date().getFullYear();
   document.getElementById('lastModified').textContent = document.lastModified;
 
