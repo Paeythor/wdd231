@@ -15,7 +15,6 @@ body {
   min-height: 100vh;
 }
 
-/* Background hero image */
 .background-hero {
   position: fixed;
   top: 0;
@@ -28,8 +27,8 @@ body {
   pointer-events: none;
 }
 
-/* Header & Footer */
-header, footer {
+header,
+footer {
   background-color: #002b7f;
   color: #ffcc00;
 }
@@ -51,14 +50,12 @@ footer {
   font-weight: 600;
 }
 
-/* Main layout */
 main {
   max-width: 960px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
 
-/* Wrapper with grid for form & text */
 .form-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -75,14 +72,12 @@ main {
   }
 }
 
-/* Form styles */
 form {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
 }
 
-/* Labels & Inputs */
 label {
   display: flex;
   flex-direction: column;
@@ -116,19 +111,16 @@ select:focus {
   box-shadow: 0 0 8px rgba(0, 43, 127, 0.5);
 }
 
-/* Textarea */
 textarea {
   resize: vertical;
   min-height: 80px;
 }
 
-/* Select */
 select {
   cursor: pointer;
   background-color: white;
 }
 
-/* Fieldsets */
 fieldset {
   border: 2px solid #8b0000;
   border-radius: 12px;
@@ -143,7 +135,6 @@ legend {
   font-size: 1.1rem;
 }
 
-/* Checkboxes & Radios */
 input[type="checkbox"],
 input[type="radio"] {
   margin-right: 0.5rem;
@@ -151,7 +142,6 @@ input[type="radio"] {
   accent-color: #002b7f;
 }
 
-/* Buttons */
 button[type="submit"],
 button[type="reset"] {
   background-color: #002b7f;
@@ -187,7 +177,6 @@ button[type="reset"]:focus {
   box-shadow: 0 6px 15px rgba(139, 0, 0, 0.7);
 }
 
-/* Text Wrapper (info section next to form) */
 .text-wrapper {
   color: #002b7f;
   font-size: 1rem;
@@ -198,7 +187,6 @@ button[type="reset"]:focus {
   gap: 1rem;
 }
 
-/* Paragraphs inside text wrapper */
 .text-wrapper p {
   background-color: #ffcc00;
   color: #002b7f;
@@ -207,7 +195,6 @@ button[type="reset"]:focus {
   box-shadow: 0 3px 10px rgba(0, 43, 127, 0.25);
 }
 
-/* Accessibility focus styles */
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible,
@@ -216,7 +203,6 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
-/* Responsive tweaks */
 @media (max-width: 480px) {
   button[type="submit"],
   button[type="reset"] {
@@ -224,8 +210,6 @@ button:focus-visible {
     margin-left: 0;
   }
 }
-
-/* Dark Theme */
 
 body.dark-theme {
   background-color: #121212;
@@ -281,4 +265,152 @@ body.dark-theme .text-wrapper p {
   background-color: #1f1f1f;
   color: #f9c74f;
   box-shadow: 0 3px 10px #444;
+}
+
+.hero-image {
+  background-image: url('../images/heroimage.png'); /* adjust path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* Make sure it fills width and height of content */
+  width: 100%;
+  min-height: 400px; /* or whatever height you want */
+  /* optional: add some padding */
+  padding: 2rem 1rem;
+
+  /* position relative only if you need absolute children */
+  position: relative;
+
+  /* keep text readable */
+  color: white;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+body.dark-theme .hero-content {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+body.dark-theme .hero-image {
+  color: #f9c74f;
+}
+#book-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 1rem;
+}
+
+#book-gallery section {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+#book-gallery section:hover {
+  transform: translateY(-5px);
+}
+
+#book-gallery img {
+  max-width: 100%;
+  border-radius: 8px;
+  height: auto;
+  margin-top: 1rem;
+}
+
+#book-gallery h3 {
+  font-size: 1.1rem;
+  color: #002b7f;
+  margin-bottom: 0.5rem;
+}
+
+#book-gallery .label {
+  font-weight: bold;
+  color: #8b0000;
+}
+@media (max-width: 1024px) {
+  #book-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  #book-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  #book-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+.author-photos img {
+  max-width: 150px;  
+  height: auto;
+  display: block;
+  margin: 0 auto; 
+}
+.book-gallery img {
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.author-photos img {
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.book-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem; 
+}
+.book-gallery > div {
+  text-align: center; 
+}
+.book-gallery img {
+  max-width: 150px; 
+  
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+.author-photos figure {
+  display: inline-block; 
+  margin: 0 1rem 1rem 0; 
+  text-align: center;    
+  max-width: 200px;      
+  vertical-align: top;   
+}
+
+.author-photos figure img {
+  max-width: 100%;       
+  height: auto;
+  display: block;
+  margin: 0 auto;        
+  
+}
+
+.author-photos figure figcaption {
+  margin-top: 0.5rem;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #555;
+  width: 100%;           
+  
+  box-sizing: border-box;
 }
