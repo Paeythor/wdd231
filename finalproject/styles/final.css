@@ -414,3 +414,77 @@ body.dark-theme .hero-image {
   
   box-sizing: border-box;
 }
+.book-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* space between cards */
+  justify-content: center; /* center the cards */
+}
+
+.book-gallery .card {
+  background-color: #f9f9f9;  /* light background */
+  border: 1px solid #ddd;     /* subtle border */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  width: 220px;  /* fixed width, same as business cards */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-gallery .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.book-gallery .card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+  object-fit: cover;
+}
+
+.book-gallery .card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.book-gallery .card p {
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+  color: #555;
+}
+#discussion-board {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-top: 2rem;
+  max-width: 600px;
+}
+
+#comment-form label {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+#comment-form input[type="text"],
+#comment-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  box-sizing: border-box;
+}
+
+#comments-container {
+  margin-top: 1rem;
+  max-height: 300px;
+  overflow-y: auto;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+}
+
+.comment {
+  margin-bottom: 1rem;
+}
