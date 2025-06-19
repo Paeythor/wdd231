@@ -417,17 +417,17 @@ body.dark-theme .hero-image {
 .book-gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem; /* space between cards */
-  justify-content: center; /* center the cards */
+  gap: 1.5rem; 
+  justify-content: center; 
 }
 
 .book-gallery .card {
-  background-color: #f9f9f9;  /* light background */
-  border: 1px solid #ddd;     /* subtle border */
+  background-color: #f9f9f9; 
+  border: 1px solid #ddd;     
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   padding: 1rem;
-  width: 220px;  /* fixed width, same as business cards */
+  width: 220px;  
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -487,4 +487,31 @@ body.dark-theme .hero-image {
 
 .comment {
   margin-bottom: 1rem;
+}
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 1em 2em;
+  max-width: 500px;
+  border-radius: 5px;
+  position: relative;
+}
+
+#modalCloseBtn {
+  position: absolute;
+  top: 0.5em;
+  right: 1em;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
