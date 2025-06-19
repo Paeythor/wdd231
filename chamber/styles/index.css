@@ -8,7 +8,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   background-color: #f4f4f4;
-  color: #333;
+  color: #1a1a1a;
   position: relative;
   z-index: 1;
   min-height: 100vh;
@@ -16,13 +16,13 @@ body {
 
 body.dark-theme {
   background-color: #121212;
-  color: #ffffff;
+  color: #f0f0f0;
 }
 
 body.dark-theme .top-bar,
 body.dark-theme footer {
   background-color: #1f1f1f;
-  color: #ffffff;
+  color: #f0f0f0;
 }
 
 body.dark-theme .business-card,
@@ -79,9 +79,9 @@ body.dark-theme .call-to-action p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #003366;
+  background: #002b7f;
   padding: 10px 20px;
-  color: white;
+  color: #ffffff;
 }
 
 .logo {
@@ -95,12 +95,11 @@ body.dark-theme .call-to-action p {
   filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.4));
 }
 
-
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #8b0000;
+  background-color: #660000;
   padding: 0 1.5rem;
   position: relative;
   width: 100%;
@@ -133,7 +132,7 @@ nav .hamburger:hover {
 
 .nav-links a {
   padding: 1rem 1.5rem;
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   position: relative;
   z-index: 1;
@@ -173,7 +172,7 @@ nav .hamburger:hover {
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #8b0000;
+    background-color: #660000;
     position: absolute;
     top: 60px;
     left: 0;
@@ -198,7 +197,6 @@ nav .hamburger:hover {
   }
 }
 
-
 .hero {
   position: relative;
   width: 100%;
@@ -218,7 +216,7 @@ nav .hamburger:hover {
   bottom: 20px;
   padding: 10px 20px;
   background: rgba(0, 0, 0, 0.6);
-  color: white;
+  color: #ffffff;
   border: none;
   cursor: pointer;
 }
@@ -228,8 +226,8 @@ nav .hamburger:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(0, 51, 102, 0.85);
-  color: white;
+  background-color: rgba(0, 43, 127, 0.85);
+  color: #ffffff;
   padding: 30px 20px;
   border-radius: 10px;
   width: 80%;
@@ -242,13 +240,13 @@ nav .hamburger:hover {
 .call-to-action h2,
 .call-to-action p {
   margin: 0 0 10px 0;
-  color: white;
+  color: #ffffff;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .cta-button {
   background-color: #f9c74f;
-  color: #003366;
+  color: #002b7f;
   padding: 12px 25px;
   font-size: 1rem;
   border: none;
@@ -266,7 +264,7 @@ nav .hamburger:hover {
 
 main {
   padding: 2rem 1rem 4rem;
-  color: #333;
+  color: #1a1a1a;
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
@@ -281,10 +279,10 @@ main {
 
 .events, .weather, .forecast, .spotlights {
   flex: 1;
-  background: white;
+  background: #ffffff;
   padding: 15px;
   border: 1px solid #ccc;
-  color: #333;
+  color: #1a1a1a;
   min-width: 280px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -317,9 +315,9 @@ main {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 1rem;
-  background: white;
+  background: #ffffff;
   border: 1px solid #ccc;
-  color: #333;
+  color: #1a1a1a;
   flex: 1;
   min-width: 280px;
   border-radius: 8px;
@@ -356,7 +354,7 @@ main {
 }
 
 .spotlight-card {
-  background: white;
+  background: #ffffff;
   padding: 15px;
   border: 1px solid #ccc;
   flex: 1;
@@ -376,8 +374,8 @@ main {
 }
 
 footer {
-  background-color: #003366;
-  color: white;
+  background-color: #002b7f;
+  color: #ffffff;
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -419,10 +417,11 @@ footer .social-icons img:hover {
     margin: 2rem auto;
   }
 }
+
 #toggle-theme {
   background: transparent;
   border: none;
-  color: #ffcc00;
+  color: #f9c74f;
   cursor: pointer;
   font-size: 1.2rem;
   width: 44px;
